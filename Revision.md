@@ -17,19 +17,19 @@ https://www.youtube.com/watch?v=-ORgK_JkOa4&list=PLFGoYjJG_fqp52WKlmgF4cV72KS9_9
 Hibernate Mapping 
 
 OneToOne 
-    User and Cart
-    Customer and Shipping address
+    1.User and Cart
+    2.Customer and Shipping address
     - Each Customer has one shipping address.
     - Hibernate uses a shared primary key to link them.
 
 OneToMany
-    Product and Reviews
+    1.Product and Reviews
     - a product can have multiple reviews.
     - Hibernate uses a foreign key in the review table.
 
 ManyToMany
-    Product and Category
-    Customer and Product
+    1.Product and Category
+    2.Customer and Product
     -Each Customer can purchase multiple Products.
     -Products can be purchased by multiple customers.
 
