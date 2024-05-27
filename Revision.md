@@ -23,7 +23,8 @@ OneToOne
     - Hibernate uses a shared primary key to link them.
 
 OneToMany
-    1.Product and Reviews
+    1.Order and OrderItems
+    2.Product and Reviews
     - a product can have multiple reviews.
     - Hibernate uses a foreign key in the review table.
 
