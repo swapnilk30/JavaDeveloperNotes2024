@@ -63,3 +63,9 @@ select max(salary) from employee where salary < (select max(salary) from employe
 
 https://www.youtube.com/watch?v=a3ngELoA9h0
 ```
+
+```
+@RequestMapping
+Difference between @PathVariable and @RequestParam In Spring Boot
+Difference between @RestController and @Controller In Spring Boot
+```
