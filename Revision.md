@@ -51,3 +51,15 @@ What are the different bean scopes in spring?
 5.Application
 6.WebSocket
 ```
+
+```
+How to find second highest salary in SQL
+1.max 
+select max(salary) from employee where salary < (select max(salary) from employee)
+
+2. limit
+
+3. top
+
+https://www.youtube.com/watch?v=a3ngELoA9h0
+```
