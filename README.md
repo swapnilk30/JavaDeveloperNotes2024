@@ -10,7 +10,23 @@
 8. What is string tokenizer ?
 9. What is String constant pool in java ?
 10. Write a program to reverse a string ?
+```
+
 11. What are different ways to create a string object ?
+- Generally, there are two ways to create the string object in java.
+- They are:
+    - By string literal
+    - By new keyword
+```java
+//String literal: String literal is created by using double quotes. For example:
+String s = "Hello";
+
+// New keyword: It is the second way of creating string object in java. It is just like creating an object of any class. We can declare it as:
+String s = new String("Hello");
+
+```
+```
+
 12. List of diff strings, how to concat all string and create a new string ?
 13. Why char array is preferred to store password than string in java ?
 14. What is difference between Stringbuilder and Stringbuffer in java ?
