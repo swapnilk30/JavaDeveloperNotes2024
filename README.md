@@ -16,7 +16,7 @@
 14. What is difference between Stringbuilder and Stringbuffer in java ?
 15. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
 16. How to create immutable class in java ?
-
+```
 17. What is use of intern() method in java ?
 
 ```java
@@ -36,6 +36,7 @@ public class InternExample {
     }
 }
 
+```
 ```
 18. Write a program to remove duplicates from any array ?
 19. How do you break a singleton pattern ?
