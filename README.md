@@ -8,7 +8,11 @@
 6. Why String is immutable in java ?
 7. Is String is thread safe in java ?
 8. What is string tokenizer ?
+```
 9. What is String constant pool in java ?
+- String constant pool is a special memory area in heap which is used for storing string objects. Internally, the string class uses a string constant pool.
+
+```
 10. Write a program to reverse a string ?
 ```
 
@@ -21,7 +25,8 @@
 //String literal: String literal is created by using double quotes. For example:
 String s = "Hello";
 
-// New keyword: It is the second way of creating string object in java. It is just like creating an object of any class. We can declare it as:
+// New keyword: It is the second way of creating string object in java. 
+// It is just like creating an object of any class. We can declare it as:
 String s = new String("Hello");
 
 ```
