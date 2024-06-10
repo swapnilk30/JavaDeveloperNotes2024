@@ -298,7 +298,14 @@ https://www.myjavainterview.in/core-java
 17. How does AOP differs from the traditional programming models ?
 18. How to create global exception handler in spring boot application ?
 19. How will you call a restful web service from a spring boot application ?
+```
 20. What is application context and bean factory in spring boot ?
+- BeanFactory is the basic container whereas ApplicationContext is the advanced container. 
+- ApplicationContext extends the BeanFactory interface. 
+- ApplicationContext provides more facilities than BeanFactory such as integration with spring AOP, message resource handling for i18n etc.
+
+
+```
 21. What is inversion of control(IOC) or dependency Injection(DI) ?
 22. Do you know different types of injections ?
 23. How do you handle transactions in spring boot application ?
