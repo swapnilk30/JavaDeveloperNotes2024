@@ -36,6 +36,7 @@ String s = new String("Hello");
 13. Why char array is preferred to store password than string in java ?
 14. What is difference between Stringbuilder and Stringbuffer in java ?
 15. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
+- https://www.youtube.com/shorts/IpwvQlyyEDY
 16. How to create immutable class in java ?
 ```
 17. What is use of intern() method in java ?
@@ -412,3 +413,210 @@ public class Employee{
 - The Spring Framework pick it up and configure it in the application 
 context as a Spring Bean.
 
+## Why multiple inheritance is not supported in java ?
+
+```
+In Java, Multiple Inheritance is not supported
+through Class but it is possible by Interface, why?
+• As we have explained in the inheritance chapter, in multiple
+inheritance, subclasses are derived from multiple superclasses.
+• If two superclasses have the same method name then which method
+is inherited into subclass is the main confusion in multiple
+inheritance.
+• That’s why Java does not support multiple inheritance in case of class.
+But, it is supported through an interface because there is no
+confusion. This is because its implementation is provided by the
+implementation class.
+```
+
+
+```
+- Cloning in Java
+https://www.youtube.com/watch?v=e1Mw-vNXuFY
+```
+
+# Array
+
+## Write java program to print duplicate elements of array
+- input  = {4,2,3,2,1,3,4,5};
+
+```java
+public class DuplicateElementArray {
+	
+	public static void duplicateElement(int [] arr) {
+		
+		int len = arr.length;
+		
+		for(int i=0; i<len; i++) {
+			
+			for(int j = i+1; j<len; j++) {
+				
+				if(arr[i]==arr[j]) {
+					
+					System.out.println(arr[i]);
+				
+				}
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		int [] input  = {4,2,3,2,3,1,3,4,5};
+		
+		duplicateElement(input);		
+	}
+}
+```
+
+
+# String
+## count number of duplicate characters in a string java using Map
+- https://www.youtube.com/watch?v=SGn30pD1Ryg
+
+```java
+
+public class DuplicateCharCount{
+
+    public static void main(String[] args){
+        
+        String str = "hello";
+
+        duplicateChar(str);
+
+    }
+
+    public static void duplicateChar(String str){
+
+        HashMap<Character,Integer> map = new HashMap<>();
+
+        // Convert String to Char Array
+        char[] ch = str.toCharArray();
+
+        for(char c:ch){
+            if(map.containsKey(c)){
+                map.put(c,map.get(c)+1);
+            }else{
+                map.put(c,1);
+            }
+        }
+    }
+}
+```
+
+## Java Program To Find Longest Substring Without Repeated Character
+```
+- Input  : abbac
+- Output : bac --> Length is 3
+
+- Input  : abcabcbb
+- Output : abc --> Length is 3
+```
+```java
+
+public class LongestSubStringLength {
+	
+	public static void main(String[] args) {
+		
+		String input = "abbac";
+		
+		String longestSubstring=null;
+		int longestSubstringLength = 0;
+		
+		
+		Map<Character, Integer> map = new LinkedHashMap<Character, Integer>();
+		
+		char[] arr = input.toCharArray();
+		
+		for(int i = 0; i< arr.length ; i++) {
+			char ch = arr[i];
+			if(!map.containsKey(ch)) {
+				map.put(ch, i);
+			}else {
+				i = map.get(ch);
+				map.clear();
+			}
+		}
+		
+		if(map.size() > longestSubstringLength) {
+			longestSubstringLength = map.size();
+			longestSubstring = map.keySet().toString();
+		}
+		
+		System.out.println(longestSubstring);
+		
+	}
+
+}
+```
+
+```
+Filter and Find Even Number using java 8
+Find Sum of Squares using java 8
+Sort a list of string using java 8
+Double Each Number of List using java 8
+Find distinct element from the list using java 8
+
+
+https://www.youtube.com/watch?v=BESfZAZnABs&t=3s
+```
+
+## How to sort a Map based on keys or values using stream?
+```java
+public class MapExample {
+	
+	public static void main(String[] args) {
+		
+		
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		
+		map.put("ABHAY KASHINATH PATIL", 416404);
+		map.put("ANUP SANJAY DHOTRE", 457030);
+		map.put("ADV NAJIB SHAIKH", 3300);
+		map.put("NOTA", 5783);
+		map.put("AMBEDKAR PRAKASH YASHWANT", 276747);
+		
+		for(Map.Entry<String,Integer> m:map.entrySet()) {
+			System.out.println(m.getKey()+"  " + m.getValue());
+		}
+		
+		//How to sort a Map based on keys or values using stream
+		
+		TreeMap<String, Integer> tm = new TreeMap<String, Integer>(map);
+		
+		System.out.println(tm);
+		
+		//Sort By Key
+		map.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(e -> System.out.println(e));
+		
+		//Sort By Value
+		map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(e -> System.out.println(e));
+	}
+
+}
+```
+
+```
+- Java8 Streams Interview Question-26-How to sort a Map based on keys or values using stream?-by Naren
+https://www.youtube.com/watch?v=Mf7hSRZsHFs
+```
+
+## Find the second largest number in a list of integers using stream ?
+```java
+public class SecondHighestNumber {
+	
+	public static void main(String[] args) {
+		
+		List<Integer> list = Arrays.asList(1,1,1,2,4,3,4,6,7,8,0,9,3,21,1);
+		
+		//Find the second largest number of a list
+		
+		Optional<Integer> findFirst = list.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst();
+		
+		Integer integer = findFirst.get();
+		
+		System.out.println(integer);
+		
+	}
+}
+```
