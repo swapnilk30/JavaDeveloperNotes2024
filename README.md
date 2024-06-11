@@ -315,3 +315,10 @@ https://www.myjavainterview.in/core-java
 
 — check weekly,,, will add more
 ```
+
+
+
+## Why we are using JPA and for database interaction we can use JDBC also.
+## Internally JPA How it is work.
+```
+```
