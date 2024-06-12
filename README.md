@@ -1,7 +1,34 @@
-# 
-```
 1. Which version of java are you using ?
 2. How to create thread-safe singleton class in java using double checked locking ?
+
+## How to create thread-safe singleton class in java using double checked locking ?
+
+```java
+// Lazy Initialization Using double check locking 
+public class SingletonClass {
+	
+	private static volatile SingletonClass instance = null;
+	
+	private SingletonClass() {
+		
+	}
+	
+	// Double Checked Locking Pattern
+	public static SingletonClass getInstance() {
+		if(instance == null) {
+			synchronized (SingletonClass.class) {
+				if(instance == null) {
+					instance = new SingletonClass();
+				}
+			}	
+		}
+		return instance;
+	}
+}
+```
+```
+
+
 3. Why multiple inheritance is not supported in java ?
 4. Can you override static method in java ?
 5. Why java does not support operator overloading ?
@@ -352,31 +379,7 @@ finalize()
 
 ```
 
-## How to create thread-safe singleton class in java using double checked locking ?
 
-```java
-// Lazy Initialization Using double check locking 
-public class SingletonClass {
-	
-	private static volatile SingletonClass instance = null;
-	
-	private SingletonClass() {
-		
-	}
-	
-	// Double Checked Locking Pattern
-	public static SingletonClass getInstance() {
-		if(instance == null) {
-			synchronized (SingletonClass.class) {
-				if(instance == null) {
-					instance = new SingletonClass();
-				}
-			}	
-		}
-		return instance;
-	}
-}
-```
 
 ## @Transient Annotation
 ```java
