@@ -1,4 +1,12 @@
+```
 1. Which version of java are you using ?
+4. Can you override static method in java ?
+5. Why java does not support operator overloading ?
+6. Why String is immutable in java ?
+7. Is String is thread safe in java ?
+8. What is string tokenizer ?
+
+```
 
 ### 2. How to create thread-safe singleton class in java using double checked locking ?
 
@@ -42,15 +50,6 @@ implementation class.
 ```
 
 
-### 4. Can you override static method in java ?
-
-```
-
-5. Why java does not support operator overloading ?
-6. Why String is immutable in java ?
-7. Is String is thread safe in java ?
-8. What is string tokenizer ?
-```
 ### 9. What is String constant pool in java ?
 - String constant pool is a special memory area in heap which is used for storing string objects. Internally, the string class uses a string constant pool.
 
@@ -982,6 +981,31 @@ public class LongestCommonPrefix {
 			}
 		}
 		return sb.toString();
+	}
+}
+```
+
+
+### How to make read only ArrayList in java.
+- Use Collections.unmodifiableList() method.
+```java
+public class ReadOnlyArrayList {
+	
+	public static void main(String[] args) {
+		
+		List<String> list = new ArrayList<>();
+		
+		list.add("Apple");
+
+		list.add("Banana");
+
+		list.add("Mango");
+
+		System.out.println(list);
+		
+		List<String> readOnlyList = Collections.unmodifiableList(list);
+		
+		readOnlyList.add("Kiwi"); //UnsupportedOperationException		
 	}
 }
 ```
