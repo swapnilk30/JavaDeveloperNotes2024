@@ -25,8 +25,7 @@ public class SingletonClass {
 	}
 }
 ```
-3. Why multiple inheritance is not supported in java ?
-## Why multiple inheritance is not supported in java ?
+### 3. Why multiple inheritance is not supported in java ?
 
 ```
 In Java, Multiple Inheritance is not supported
