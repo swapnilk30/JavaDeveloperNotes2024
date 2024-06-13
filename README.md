@@ -812,6 +812,24 @@ if it exists ,then it will reference the existing string rather than creating a 
 ```
 
 
+### Wap to print 1 to 100 numbers using Stream Api
+
+```java
+public class PrintOneToHundread {
+
+	public static void main(String[] args) {
+	
+		// Wap to print 1 to 100 numbers using Stream Api
+		
+		IntStream.range(1, 101).forEach(x->System.out.println(x));
+		
+	}
+}
+
+```
+
+
+
 # MultiThreading
 
 ### Can We Start Thread Twice ?
