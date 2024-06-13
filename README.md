@@ -26,10 +26,24 @@ public class SingletonClass {
 	}
 }
 ```
+3. Why multiple inheritance is not supported in java ?
+## Why multiple inheritance is not supported in java ?
+
+```
+In Java, Multiple Inheritance is not supported
+through Class but it is possible by Interface, why?
+• As we have explained in the inheritance chapter, in multiple
+inheritance, subclasses are derived from multiple superclasses.
+• If two superclasses have the same method name then which method
+is inherited into subclass is the main confusion in multiple
+inheritance.
+• That’s why Java does not support multiple inheritance in case of class.
+But, it is supported through an interface because there is no
+confusion. This is because its implementation is provided by the
+implementation class.
 ```
 
-
-3. Why multiple inheritance is not supported in java ?
+```
 4. Can you override static method in java ?
 5. Why java does not support operator overloading ?
 6. Why String is immutable in java ?
@@ -416,21 +430,7 @@ public class Employee{
 - The Spring Framework pick it up and configure it in the application 
 context as a Spring Bean.
 
-## Why multiple inheritance is not supported in java ?
 
-```
-In Java, Multiple Inheritance is not supported
-through Class but it is possible by Interface, why?
-• As we have explained in the inheritance chapter, in multiple
-inheritance, subclasses are derived from multiple superclasses.
-• If two superclasses have the same method name then which method
-is inherited into subclass is the main confusion in multiple
-inheritance.
-• That’s why Java does not support multiple inheritance in case of class.
-But, it is supported through an interface because there is no
-confusion. This is because its implementation is provided by the
-implementation class.
-```
 
 
 ```
