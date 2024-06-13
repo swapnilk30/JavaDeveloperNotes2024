@@ -1,7 +1,6 @@
 1. Which version of java are you using ?
-2. How to create thread-safe singleton class in java using double checked locking ?
 
-## How to create thread-safe singleton class in java using double checked locking ?
+### 2. How to create thread-safe singleton class in java using double checked locking ?
 
 ```java
 // Lazy Initialization Using double check locking 
