@@ -702,5 +702,11 @@ Difference between @RestController and @Controller In Spring Boot
 
 ### Write a function to find the longest common prefix string amongst an array of strings.If there is no common prefix ,return an empty string "".
 ```
+Input : strs = ["flower","flow","flight"]
+Output : "fl"
+
+Input : strs = ["dog","racecar","car"]
+Output : ""
+
 https://www.youtube.com/watch?v=K5I7aUK9LVU
 ```
