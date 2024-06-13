@@ -742,7 +742,7 @@ Output :
 5 
 ```
 
-## Merge Sorted Array
+### Merge Sorted Array
 
 ```java
 
@@ -796,7 +796,7 @@ public class MergeSortedArray {
 }
 ```
 
-## Find Missing Number in Array
+### Find Missing Number in Array
 
 ```java
 public class MissingNumberInArray {
@@ -827,7 +827,7 @@ public class MissingNumberInArray {
 	}
 }
 ```
-## Write java program to print duplicate elements of array
+### Write java program to print duplicate elements of array
 - input  = {4,2,3,2,1,3,4,5};
 
 ```java
@@ -859,11 +859,7 @@ public class DuplicateElementArray {
 }
 ```
 
-
-
-
-# String
-## count number of duplicate characters in a string java using Map
+### count number of duplicate characters in a string java using Map
 - https://www.youtube.com/watch?v=SGn30pD1Ryg
 
 ```java
@@ -896,7 +892,7 @@ public class DuplicateCharCount{
 }
 ```
 
-## Java Program To Find Longest Substring Without Repeated Character
+### Java Program To Find Longest Substring Without Repeated Character
 ```
 - Input  : abbac
 - Output : bac --> Length is 3
