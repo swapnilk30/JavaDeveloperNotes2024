@@ -698,3 +698,9 @@ Difference between @RestController and @Controller In Spring Boot
 ```
 
 ## @Autowired Annotaion
+
+
+### Write a function to find the longest common prefix string amongst an array of strings.If there is no common prefix ,return an empty string "".
+```
+https://www.youtube.com/watch?v=K5I7aUK9LVU
+```
