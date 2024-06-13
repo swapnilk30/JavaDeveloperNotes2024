@@ -668,6 +668,11 @@ public class PrintOneToHundread {
 
 # MultiThreading
 
+### Different ways of creating a thread in Java
+
+1. One is by **extending java.lang.Thread class**
+2. Another is by **implementing java.lang.Runnable interface**
+
 ### Can We Start Thread Twice ?
 - No. You can not start thread twice
 - This will result in a IllegalThreadStateException
