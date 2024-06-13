@@ -1031,9 +1031,83 @@ public class AverageSalaryByDepartment {
                         Collectors.averagingDouble(Employee::getSalary)));
 
         System.out.println("Average Salary by Department:");
-		
+
         averageSalaryByDepartment.forEach((department, averageSalary) ->
                 System.out.println(department + ": " + averageSalary));
     }
+}
+```
+
+### sort an employee list using the Stream API in Java
+```java
+public class Main {
+    public static void main(String[] args) {
+        List<Employee> employees = new ArrayList<>();
+        employees.add(new Employee("John", 30, 50000));
+        employees.add(new Employee("Alice", 25, 60000));
+        employees.add(new Employee("Bob", 35, 45000));
+
+        // Sorting employees by name
+        List<Employee> sortedByName = employees.stream()
+                .sorted(Comparator.comparing(Employee::getName))
+                .toList();
+
+        System.out.println("Employees sorted by name:");
+        sortedByName.forEach(System.out::println);
+
+        // Sorting employees by age
+        List<Employee> sortedByAge = employees.stream()
+                .sorted(Comparator.comparingInt(Employee::getAge))
+                .toList();
+
+        System.out.println("\nEmployees sorted by age:");
+        sortedByAge.forEach(System.out::println);
+
+        // Sorting employees by salary
+        List<Employee> sortedBySalary = employees.stream()
+                .sorted(Comparator.comparingDouble(Employee::getSalary))
+                .toList();
+
+        System.out.println("\nEmployees sorted by salary:");
+        sortedBySalary.forEach(System.out::println);
+    }
+}
+```
+
+
+### find out all the numbers starting with 1 in a list by using Stream API ?
+```java
+    List<Integer> list = Arrays.asList(20,15,80,11,48,25,98,32,17);
+
+    list.stream().map(s -> s.toString()).filter(s -> s.startsWith("1")).forEach(System.out::println);
+```
+
+
+### Write a java program to find sum of even numbers and sum of odd numbers in a given list using java 8 streams.
+    List<Integer> list = Arrays.asList(3,5,6,8,9);
+
+```java
+public class SumOfEvenOdd {
+	
+	public static void main(String[] args) {
+		List<Integer> list = Arrays.asList(3,5,6,8,9);
+		
+		//filter even numbers and add to list
+		List<Integer> listOfEvenNum = list.stream().filter(n -> n % 2 ==0 ).collect(Collectors.toList());
+		System.out.println(listOfEvenNum);
+		
+		int sumOfEvenNumbers = list.stream().filter(n->n%2==0).mapToInt(Integer::intValue).sum();
+
+		System.out.println(sumOfEvenNumbers);
+		
+		//filter Odd numbers and add to list
+		List<Integer> listOfOddNum = list.stream().filter(n->n%2 == 1).collect(Collectors.toList());
+		
+		System.out.println(listOfOddNum);
+		
+		int sumOfOddNumbers = list.stream().filter(n->n%2==1).mapToInt(Integer::intValue).sum();
+	
+		System.out.println(sumOfOddNumbers);
+	}
 }
 ```
