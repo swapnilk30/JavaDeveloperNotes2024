@@ -734,6 +734,72 @@ with a unique identification number **provided by the JVM** of the host machine.
 
 
 
+### Program to find the minimum (or maximum) element of an array
+
+```java
+public class MaxAndMinElementArray {
+	
+	public static void main(String[] args) {
+		
+		int a[]={1,423,6,46,34,23,13,53,4};
+		
+		int max = a[0];
+		
+		for(int i = 1;i<a.length;i++) {
+			if(a[i] > max) {
+				max = a[i];	
+			}
+		}
+		
+		System.out.println(Arrays.toString(a));
+		
+		System.out.println("Maximum Element is : " + max);
+		
+		int min = a[0];
+		
+		for(int i=1 ;i < a.length ; i++) {
+			if(a[i] < min) {
+				min = a[i];
+			}
+		}
+		System.out.println("Minimum Element is : " + min);	
+	}
+}
+```
+### How to reverse the array elements in Java
+
+```java
+public class ReverseArray {
+	
+	public static void main(String[] args) {
+		
+		int [] arr = {1,3,5,7,4,8,9};
+		
+		System.out.println("before Reverse : "+ Arrays.toString(arr));
+		
+		reverseArray(arr);
+		
+		System.out.println("after Reverse : "+ Arrays.toString(arr));
+	}
+
+	private static void reverseArray(int[] arr) {
+		
+		int i = 0;
+		int j = arr.length-1;
+		
+		while(i<j) {
+			
+			int temp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = temp;
+			
+			i++;
+			j--;
+		}
+	}
+}
+```
+
 
 ### Find Sub Array Of An Array
 ```java
