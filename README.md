@@ -1009,3 +1009,31 @@ public class ReadOnlyArrayList {
 	}
 }
 ```
+
+### Write a java program to find the average salary of each department using java 8 Stream API?
+
+```java
+public class AverageSalaryByDepartment {
+
+    public static void main(String[] args) {
+
+        List<Employee> employees = Arrays.asList(
+                new Employee("John", "HR", 50000),
+                new Employee("Jane", "IT", 60000),
+                new Employee("Doe", "IT", 70000),
+                new Employee("Smith", "HR", 55000),
+                new Employee("Alice", "Finance", 75000),
+                new Employee("Bob", "Finance", 80000)
+        );
+
+        Map<String, Double> averageSalaryByDepartment = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment,
+                        Collectors.averagingDouble(Employee::getSalary)));
+
+        System.out.println("Average Salary by Department:");
+		
+        averageSalaryByDepartment.forEach((department, averageSalary) ->
+                System.out.println(department + ": " + averageSalary));
+    }
+}
+```
