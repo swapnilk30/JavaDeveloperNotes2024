@@ -710,3 +710,40 @@ Output : ""
 
 https://www.youtube.com/watch?v=K5I7aUK9LVU
 ```
+```java
+public class LongestCommonPrefix {
+	
+	public static void main(String[] args) {
+		
+		
+		String [] strs = {"flower","flow","flight"};
+		
+		String result = strs[0];
+		
+		for(int i = 1; i< strs.length ; i++) {
+			result = common(result, strs[i]);
+		}
+		
+		System.out.println(result);
+		
+	}
+
+	
+	public static String common(String s1,String s2) {
+		
+		int n = Math.min(s1.length(), s2.length());
+		
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = 0 ; i<n ;i++) {
+			
+			if(s1.charAt(i)== s2.charAt(i)) {
+				sb.append(s1.charAt(i));
+			}else {
+				break;
+			}
+		}
+		return sb.toString();
+	}
+}
+```
