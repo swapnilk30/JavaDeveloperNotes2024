@@ -850,7 +850,7 @@ public class PrintOneToHundread {
 
 
 
-## Can we use POST instead of PUT and vice versa ?
+### Can we use POST instead of PUT and vice versa ?
 - Yes, But recommendadation is to follow guidlines 
 - if you are requirement is to create resource then go for POST
 - if you are requirement is to Update resource then go for PUT PATCH
