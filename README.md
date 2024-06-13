@@ -748,6 +748,69 @@ public class LongestCommonPrefix {
 }
 ```
 
+### what will happen if we write final keyword with abstract class?
+- If you declare a class abstract, to use it, you must extend it and if you declare a class final you can not extend it,
+- since both contradict with each other you can not declare a class both abstract and final
+if you do so a compile time error will be generated.
+
+### realtime example of final class provided by java?
+- A real-time example of a final class in Java is the java.lang.String class,
+- which is a final class and cannot be extended by any other class.
+- This is because the String class is complete in nature and cannot be modified
+
+### Why Strings are Immutable or final in Java ?
+1. Immutable String or Object that can not be modified once it is created. But We can only change the reference to the object.
+2. The String is immutable in java because of the security,synchronization and concurrency ,caching and class loading.
+
+
+### Why java provided with String Constant Pool as we can store the objects in heap memory ?
+- String Constant Pool provides the facility of reusability of the existing string object.
+- When a new string object is created using the string literals ,then JVM first checks in the pool if this string already exists or not.
+if it exists ,then it will reference the existing string rather than creating a new object.
+- this will help in the speeding up of the application and also helps in saving the memory as no two objects will have the same content.
+
+### What is public static void main(String[] args) ?
+    public - this method is accessible from outside the class.
+    static - No object is required to call the main method.
+    void - this method does not return any value.
+    main - Special method name to start the java program execution.
+    String[] args - the arguments passed while running the program.
+
+### Can we change the order of public , static , and void keywords ?
+- Yes can change the order of public and static keywords , but void should come just before the method name.
+
+### how memory management or Garbage collection works in java?
+- Garbage collection
+    - Java provides automatic memory management through a program called Garbage collector.
+    - "Remove objects that are not used anymore."
+    - live object = reacheable (referenced by someone else)
+    - dead object = unreachable (not referenced from anywhere)
+    - Garbage collection is carried out by a daemon thread called "Garbage collector"
+    - we can not force gc to happen (System.gc())
+
+
+### Why abstract class has constructor even though we cannot create object?
+- We cannot create an object of abstract class but we can create an object of subclass of abstract class.
+- When we create an object of subclass of an abstract class, it calls the constructor of subclass.
+- This subclass constructor has super in the first line that calls constructor of an abstract class.
+- Thus, the constructors of an abstract class are used from constructor of its subclass.
+- If the abstract class doesn’t have a constructor, a class that extends that abstract class will not get compiled.
+
+
+### What is the command for running the jar file?
+```
+    java -jar yourfile.jar
+```
+
+### What is the command to build the project using Maven?
+
+```
+    mvn package
+    mvn clean package
+    
+    This command will compile the source code, run tests, and package the project into the specified format (usually a JAR file).
+```
+
 
 # MultiThreading
 
