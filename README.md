@@ -41,8 +41,11 @@ confusion. This is because its implementation is provided by the
 implementation class.
 ```
 
+
+### 4. Can you override static method in java ?
+
 ```
-4. Can you override static method in java ?
+
 5. Why java does not support operator overloading ?
 6. Why String is immutable in java ?
 7. Is String is thread safe in java ?
