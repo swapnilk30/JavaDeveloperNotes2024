@@ -51,7 +51,7 @@ implementation class.
 7. Is String is thread safe in java ?
 8. What is string tokenizer ?
 ```
-9. What is String constant pool in java ?
+### 9. What is String constant pool in java ?
 - String constant pool is a special memory area in heap which is used for storing string objects. Internally, the string class uses a string constant pool.
 
 ```
