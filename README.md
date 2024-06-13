@@ -439,121 +439,6 @@ context as a Spring Bean.
 https://www.youtube.com/watch?v=e1Mw-vNXuFY
 ```
 
-# Array
-
-## Write java program to print duplicate elements of array
-- input  = {4,2,3,2,1,3,4,5};
-
-```java
-public class DuplicateElementArray {
-	
-	public static void duplicateElement(int [] arr) {
-		
-		int len = arr.length;
-		
-		for(int i=0; i<len; i++) {
-			
-			for(int j = i+1; j<len; j++) {
-				
-				if(arr[i]==arr[j]) {
-					
-					System.out.println(arr[i]);
-				
-				}
-			}
-		}
-	}
-	
-	public static void main(String[] args) {
-		
-		int [] input  = {4,2,3,2,3,1,3,4,5};
-		
-		duplicateElement(input);		
-	}
-}
-```
-
-
-# String
-## count number of duplicate characters in a string java using Map
-- https://www.youtube.com/watch?v=SGn30pD1Ryg
-
-```java
-
-public class DuplicateCharCount{
-
-    public static void main(String[] args){
-        
-        String str = "hello";
-
-        duplicateChar(str);
-
-    }
-
-    public static void duplicateChar(String str){
-
-        HashMap<Character,Integer> map = new HashMap<>();
-
-        // Convert String to Char Array
-        char[] ch = str.toCharArray();
-
-        for(char c:ch){
-            if(map.containsKey(c)){
-                map.put(c,map.get(c)+1);
-            }else{
-                map.put(c,1);
-            }
-        }
-    }
-}
-```
-
-## Java Program To Find Longest Substring Without Repeated Character
-```
-- Input  : abbac
-- Output : bac --> Length is 3
-
-- Input  : abcabcbb
-- Output : abc --> Length is 3
-```
-```java
-
-public class LongestSubStringLength {
-	
-	public static void main(String[] args) {
-		
-		String input = "abbac";
-		
-		String longestSubstring=null;
-		int longestSubstringLength = 0;
-		
-		
-		Map<Character, Integer> map = new LinkedHashMap<Character, Integer>();
-		
-		char[] arr = input.toCharArray();
-		
-		for(int i = 0; i< arr.length ; i++) {
-			char ch = arr[i];
-			if(!map.containsKey(ch)) {
-				map.put(ch, i);
-			}else {
-				i = map.get(ch);
-				map.clear();
-			}
-		}
-		
-		if(map.size() > longestSubstringLength) {
-			longestSubstringLength = map.size();
-			longestSubstring = map.keySet().toString();
-		}
-		
-		System.out.println(longestSubstring);
-		
-	}
-
-}
-```
-
 ```
 Filter and Find Even Number using java 8
 Find Sum of Squares using java 8
@@ -699,54 +584,6 @@ Difference between @RestController and @Controller In Spring Boot
 
 ## @Autowired Annotaion
 
-
-### Write a function to find the longest common prefix string amongst an array of strings.If there is no common prefix ,return an empty string "".
-```
-Input : strs = ["flower","flow","flight"]
-Output : "fl"
-
-Input : strs = ["dog","racecar","car"]
-Output : ""
-
-https://www.youtube.com/watch?v=K5I7aUK9LVU
-```
-```java
-public class LongestCommonPrefix {
-	
-	public static void main(String[] args) {
-		
-		
-		String [] strs = {"flower","flow","flight"};
-		
-		String result = strs[0];
-		
-		for(int i = 1; i< strs.length ; i++) {
-			result = common(result, strs[i]);
-		}
-		
-		System.out.println(result);
-		
-	}
-
-	
-	public static String common(String s1,String s2) {
-		
-		int n = Math.min(s1.length(), s2.length());
-		
-		StringBuilder sb = new StringBuilder();
-		
-		for(int i = 0 ; i<n ;i++) {
-			
-			if(s1.charAt(i)== s2.charAt(i)) {
-				sb.append(s1.charAt(i));
-			}else {
-				break;
-			}
-		}
-		return sb.toString();
-	}
-}
-```
 
 ### what will happen if we write final keyword with abstract class?
 - If you declare a class abstract, to use it, you must extend it and if you declare a class final you can not extend it,
@@ -987,6 +824,168 @@ public class MissingNumberInArray {
 		System.out.println("Sum Of Range Of Elements in Array ="+sum2);
 		
 		System.out.println("Missing Number is = "+(sum2-sum1));
+	}
+}
+```
+## Write java program to print duplicate elements of array
+- input  = {4,2,3,2,1,3,4,5};
+
+```java
+public class DuplicateElementArray {
+	
+	public static void duplicateElement(int [] arr) {
+		
+		int len = arr.length;
+		
+		for(int i=0; i<len; i++) {
+			
+			for(int j = i+1; j<len; j++) {
+				
+				if(arr[i]==arr[j]) {
+					
+					System.out.println(arr[i]);
+				
+				}
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		int [] input  = {4,2,3,2,3,1,3,4,5};
+		
+		duplicateElement(input);		
+	}
+}
+```
+
+
+
+
+# String
+## count number of duplicate characters in a string java using Map
+- https://www.youtube.com/watch?v=SGn30pD1Ryg
+
+```java
+
+public class DuplicateCharCount{
+
+    public static void main(String[] args){
+        
+        String str = "hello";
+
+        duplicateChar(str);
+
+    }
+
+    public static void duplicateChar(String str){
+
+        HashMap<Character,Integer> map = new HashMap<>();
+
+        // Convert String to Char Array
+        char[] ch = str.toCharArray();
+
+        for(char c:ch){
+            if(map.containsKey(c)){
+                map.put(c,map.get(c)+1);
+            }else{
+                map.put(c,1);
+            }
+        }
+    }
+}
+```
+
+## Java Program To Find Longest Substring Without Repeated Character
+```
+- Input  : abbac
+- Output : bac --> Length is 3
+
+- Input  : abcabcbb
+- Output : abc --> Length is 3
+```
+```java
+
+public class LongestSubStringLength {
+	
+	public static void main(String[] args) {
+		
+		String input = "abbac";
+		
+		String longestSubstring=null;
+		int longestSubstringLength = 0;
+		
+		
+		Map<Character, Integer> map = new LinkedHashMap<Character, Integer>();
+		
+		char[] arr = input.toCharArray();
+		
+		for(int i = 0; i< arr.length ; i++) {
+			char ch = arr[i];
+			if(!map.containsKey(ch)) {
+				map.put(ch, i);
+			}else {
+				i = map.get(ch);
+				map.clear();
+			}
+		}
+		
+		if(map.size() > longestSubstringLength) {
+			longestSubstringLength = map.size();
+			longestSubstring = map.keySet().toString();
+		}
+		
+		System.out.println(longestSubstring);
+		
+	}
+
+}
+```
+
+### Write a function to find the longest common prefix string amongst an array of strings.If there is no common prefix ,return an empty string "".
+```
+Input : strs = ["flower","flow","flight"]
+Output : "fl"
+
+Input : strs = ["dog","racecar","car"]
+Output : ""
+
+https://www.youtube.com/watch?v=K5I7aUK9LVU
+```
+```java
+public class LongestCommonPrefix {
+	
+	public static void main(String[] args) {
+		
+		
+		String [] strs = {"flower","flow","flight"};
+		
+		String result = strs[0];
+		
+		for(int i = 1; i< strs.length ; i++) {
+			result = common(result, strs[i]);
+		}
+		
+		System.out.println(result);
+		
+	}
+
+	
+	public static String common(String s1,String s2) {
+		
+		int n = Math.min(s1.length(), s2.length());
+		
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = 0 ; i<n ;i++) {
+			
+			if(s1.charAt(i)== s2.charAt(i)) {
+				sb.append(s1.charAt(i));
+			}else {
+				break;
+			}
+		}
+		return sb.toString();
 	}
 }
 ```
