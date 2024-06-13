@@ -58,7 +58,7 @@ implementation class.
 10. Write a program to reverse a string ?
 ```
 
-11. What are different ways to create a string object ?
+### 11. What are different ways to create a string object ?
 - Generally, there are two ways to create the string object in java.
 - They are:
     - By string literal
@@ -81,7 +81,7 @@ String s = new String("Hello");
 - https://www.youtube.com/shorts/IpwvQlyyEDY
 16. How to create immutable class in java ?
 ```
-17. What is use of intern() method in java ?
+### 17. What is use of intern() method in java ?
 
 ```java
 public class InternExample {
