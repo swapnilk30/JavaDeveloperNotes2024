@@ -847,3 +847,13 @@ public class PrintOneToHundread {
 ```
 ### What methods thread use to communicate with each other ?
 - Thread use wait(), notify(), and notifyAll() to communicate with each other.
+
+
+
+## Can we use POST instead of PUT and vice versa ?
+- Yes, But recommendadation is to follow guidlines 
+- if you are requirement is to create resource then go for POST
+- if you are requirement is to Update resource then go for PUT PATCH
+```
+https://www.youtube.com/watch?v=drwOMR3O0zc
+```
