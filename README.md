@@ -747,3 +747,22 @@ public class LongestCommonPrefix {
 	}
 }
 ```
+
+
+# MultiThreading
+
+### Can We Start Thread Twice ?
+- No. You can not start thread twice
+- This will result in a IllegalThreadStateException
+```java
+                public class StartTwice{
+                    public static void main(String[] args){
+                        Thread t = new Thread();
+                        t.start();
+                        t.start();
+                    }
+
+                }
+```
+### What methods thread use to communicate with each other ?
+- Thread use wait(), notify(), and notifyAll() to communicate with each other.
