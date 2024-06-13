@@ -673,6 +673,10 @@ public class PrintOneToHundread {
 1. One is by **extending java.lang.Thread class**
 2. Another is by **implementing java.lang.Runnable interface**
 
+### Why to override run() method while creating the thread using the Runnable interface ?
+    because Runnable is interface and it has abstract method called run. 
+    Hence when we implement the Runnable interface we have to override run() method. 
+
 ### Can We Start Thread Twice ?
 - No. You can not start thread twice
 - This will result in a IllegalThreadStateException
@@ -698,6 +702,38 @@ public class PrintOneToHundread {
 ```
 https://www.youtube.com/watch?v=drwOMR3O0zc
 ```
+
+
+### Serialization and DeSerialization
+- Serialization is a mechanism of converting the state of an object into a byte stream.
+- Deserialization is the reverse process where the byte stream is used to recreate the actual
+Java object in memory.
+> Note: The byte stream created is platform independent. So, the object serialized on one
+platform can be deserialized on a different platform.
+
+### Why we need Serialization in java?
+- To transfer objects through a network.
+- To keep Java objects in memory.
+- To save Java objects in files.
+
+### How to implement serialization in java?
+1. For **serializing** the **object**, we call the **writeObject()** method of **ObjectOutputStream**, and
+for **deserialization** we call the **readObject()** method of **ObjectInputStream** class.
+2. We must implement the **Serializable interface** for serializing the object.
+
+### What is Serial Version UID?
+- every serializable class/object gets associated
+with a unique identification number **provided by the JVM** of the host machine.This Unique ID is called Serial Version UID.
+- This UID is used as an identification by the JVM of the receiving end to confirm that the same object is being DeSerialized at the receiving end.
+
+### What is Transient Keyword?
+- Transient Keyword is a reserved keyword in Java.
+- It is used as a variable modifier at the time of the Serialization process.
+- **Declaring a variable with Transient keyword avoids the variable from being Serialized.**
+- During deserialization, the transient variable will be assigned a default value, typically null for reference types or 0 for primitive types.
+
+
+
 
 ### Find Sub Array Of An Array
 ```java
