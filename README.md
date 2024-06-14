@@ -1224,5 +1224,10 @@ public class SumOfEvenOdd {
 ```
 
 
+### @Component annotation
+
+### @Controller annotation
 
 ### @RestController annotation
+
+### @RequestMapping annotation
