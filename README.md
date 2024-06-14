@@ -129,7 +129,7 @@ public class InternExample {
 40. How blocking queue works ?
 41. Difference between hashmap and concurrent Hashmap ?
 42. Lets say you are working with hashmap, First key is null, value is Ravi, Second key is null, value is Bisht, hashmap.get(null), what will  I get
-43. Explain the FailFast iterator and FailSafe iterator along with examples for each
+
 44. Explain lamda expression and functional expressions ?
 45. Why we are using functional annotation for functional interface
 46. Lets say you have two variable a and b, with values 5 and 10. Interchange value of a and b without using a temporary variable ? Will the program work for negative numbers ?
@@ -191,7 +191,8 @@ public class InternExample {
 99. What is blank final variable in java, If we declare a final variable but we havenot assigned any value, what happens here ?
 100. How the java objects are stored in memory ?
 ```
-
+### 43. Explain the FailFast iterator and FailSafe iterator along with examples for each
+![iterator](/images/iterator.png)
 ```
 101. List of mobile numbers, find customers having number +91 ?
 102. What is Predicate in terms of functional interface ?
