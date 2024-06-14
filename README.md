@@ -71,11 +71,14 @@ String s = "Hello";
 String s = new String("Hello");
 
 ```
+### 14. What is difference between Stringbuilder and Stringbuffer in java ?
+![string](/images/stringbuilder.jpg)
+
 ```
 
 12. List of diff strings, how to concat all string and create a new string ?
 13. Why char array is preferred to store password than string in java ?
-14. What is difference between Stringbuilder and Stringbuffer in java ?
+
 15. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
 - https://www.youtube.com/shorts/IpwvQlyyEDY
 16. How to create immutable class in java ?
@@ -1220,4 +1223,4 @@ public class SumOfEvenOdd {
 ```
 
 
-![string](/images/stringbuilder.jpg)
+
