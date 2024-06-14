@@ -6,6 +6,12 @@
 7. Is String is thread safe in java ?
 8. What is string tokenizer ?
 
+12. List of diff strings, how to concat all string and create a new string ?
+13. Why char array is preferred to store password than string in java ?
+
+15. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
+- https://www.youtube.com/shorts/IpwvQlyyEDY
+16. How to create immutable class in java ?
 ```
 
 ### 2. How to create thread-safe singleton class in java using double checked locking ?
@@ -62,6 +68,7 @@ implementation class.
 - They are:
     - By string literal
     - By new keyword
+
 ```java
 //String literal: String literal is created by using double quotes. For example:
 String s = "Hello";
@@ -74,15 +81,7 @@ String s = new String("Hello");
 ### 14. What is difference between Stringbuilder and Stringbuffer in java ?
 ![string](/images/stringbuilder.jpg)
 
-```
 
-12. List of diff strings, how to concat all string and create a new string ?
-13. Why char array is preferred to store password than string in java ?
-
-15. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
-- https://www.youtube.com/shorts/IpwvQlyyEDY
-16. How to create immutable class in java ?
-```
 ### 17. What is use of intern() method in java ?
 
 ```java
@@ -103,6 +102,7 @@ public class InternExample {
 }
 
 ```
+
 ```
 18. Write a program to remove duplicates from any array ?
 19. How do you break a singleton pattern ?
