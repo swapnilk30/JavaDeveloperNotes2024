@@ -391,6 +391,7 @@ https://www.myjavainterview.in/core-java
 3. How does spring boot support the development of restful web services ?
 4. Explain role of EnableAutoConfiguration in spring boot app and how does spring achive auto configuration internally ?
 5. Are you aware of actuator endpoints?
+- https://www.youtube.com/watch?v=lMDZ6dple9Q
 6. What is dependency name for actuator ?
 7. Can we secure these actuator endpoints ? and how can we secure it ?
 8. Wht strategies would be used to optimize the performance of spring boot applications ?
