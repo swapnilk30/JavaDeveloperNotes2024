@@ -63,6 +63,25 @@ public class Test{
 basis of reference comparision(address comparision)
 
 - "equals" method is overridden in String class , Wrapper class , Collection classes for Content comparision
+
+```java
+public class Test{
+    public static void main(String[] args){
+
+        Student s1 = new Student();
+        Student s2 = s1;
+        Student s3 = new Student();
+
+        if(s1.equals(s2)) {
+            System.out.print("executed");
+        }
+
+        if(s1.equals(s3)) {
+            System.out.print("executed");
+        }
+    }
+}
+```
 - note: "equals" method is not overrideen in "StringBuffer" class
 
 ![string](/images/equals%20and%20==%20.png)
@@ -86,5 +105,5 @@ public class InternExample {
     }
 }
 ```
-### 14. What is difference between Stringbuilder and Stringbuffer in java ?
+### 14. What is difference between Stringbuffer and Stringbuffer in java ?
 ![string](/images/stringbuilder.jpg)
