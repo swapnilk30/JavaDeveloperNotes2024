@@ -109,7 +109,7 @@ public class InternExample {
 ![string](/images/stringbuilder.jpg)
 
 
-## Java program to check whether a string is a Palindrome.
+## 1.Java program to check whether a string is a Palindrome.
 
 ```java
 package com.string;
@@ -131,6 +131,24 @@ public class CheckPalindromeString {
 		}else {
 			System.out.println("String is Not Palindrome !!");
 		}
+	}
+}
+```
+
+## In a string, count the repeated characters and show in map using Java 8.
+    For Example, "india" -> output is "i->2, n->1,d->1,a->1"
+
+```java
+public class CountChars {
+	
+	public static void main(String[] args) {
+		
+		String str = "india";
+		
+		Map<Character, Long> charCounts = str.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+		charCounts.forEach((k,v) -> System.out.print(k +" -> "+ v + " "));
+		
 	}
 }
 ```
