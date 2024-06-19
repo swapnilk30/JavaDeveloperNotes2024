@@ -6,13 +6,24 @@
 7. Is String is thread safe in java ?
 8. What is string tokenizer ?
 
-12. List of diff strings, how to concat all string and create a new string ?
+
 13. Why char array is preferred to store password than string in java ?
 
 15. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
 - https://www.youtube.com/shorts/IpwvQlyyEDY
 16. How to create immutable class in java ?
 ```
+
+### 12. List of diff strings, how to concat all string and create a new string ?
+```
+List<String> strings = List.of("Hello", "World", "Java", "is", "awesome");
+```
+
+
+
+
+
+
 
 ### 2. How to create thread-safe singleton class in java using double checked locking ?
 
