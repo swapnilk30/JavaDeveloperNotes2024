@@ -142,7 +142,41 @@ Optional<Integer> sum = list.stream().reduce(Integer::sum);
 ```
 ```
 29. What are the other features of Java 8 you have used while coding ?
-30. Can you iterate and remove the element of ArrayList at the same time ?
+
+```
+### 30. Can you iterate and remove the element of ArrayList at the same time ?
+- In Java, directly removing elements from an ArrayList while iterating over it using a simple for loop or an enhanced for-each loop will result in a ConcurrentModificationException.
+- However, you can safely remove elements using an iterator.
+```java
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+
+        Iterator<Integer> iterator = numbers.iterator();
+        while (iterator.hasNext()) {
+            Integer number = iterator.next();
+            if (number % 2 == 0) { // Example condition: remove even numbers
+                iterator.remove();
+            }
+        }
+
+        System.out.println(numbers); // Output: [1, 3, 5]
+    }
+}
+```
+- Call the remove() method of the Iterator to remove the current element. This method is safe to call during iteration and does not cause a ConcurrentModificationException.
+- Using an Iterator is the recommended way to remove elements from a collection while iterating over it. 
+- The Iterator's remove method ensures that the underlying collection is modified in a way that does not interfere with the iteration process.
+
+```
 31. what was log4j vulnerability?, how to fix log4j vulnerability ?
 32. Can you tell me how hashmap internally works ?
 33. What is concurrent hashmap ?
