@@ -42,6 +42,22 @@ public class ConcatenatingAllString {
 	}
 }
 ```
+```java
+/*Using Collectors.joining: If you are using Java 8 or later, 
+ * you can use the Collectors.joining method with streams to concatenate strings.*/
+
+public class ConcatenatingAllString {
+	
+	public static void main(String[] args) {
+		
+		List<String> strings = Arrays.asList("Hello", "World", "Java", "is", "awesome");
+		
+		String result = strings.stream().collect(Collectors.joining());
+		
+		System.out.println(result);
+	}
+}
+```
 
 
 
