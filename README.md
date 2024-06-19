@@ -55,53 +55,11 @@ confusion. This is because its implementation is provided by the
 implementation class.
 ```
 
-
-### 9. What is String constant pool in java ?
-- String constant pool is a special memory area in heap which is used for storing string objects. Internally, the string class uses a string constant pool.
-
 ```
 10. Write a program to reverse a string ?
 ```
 
-### 11. What are different ways to create a string object ?
-- Generally, there are two ways to create the string object in java.
-- They are:
-    - By string literal
-    - By new keyword
 
-```java
-//String literal: String literal is created by using double quotes. For example:
-String s = "Hello";
-
-// New keyword: It is the second way of creating string object in java. 
-// It is just like creating an object of any class. We can declare it as:
-String s = new String("Hello");
-
-```
-### 14. What is difference between Stringbuilder and Stringbuffer in java ?
-![string](/images/stringbuilder.jpg)
-
-
-### 17. What is use of intern() method in java ?
-
-```java
-public class InternExample {
-    public static void main(String[] args) {
-        String s1 = new String("hello");
-        String s2 = "hello";
-
-        // Before interning
-        System.out.println(s1 == s2); // false, different references
-
-        // Interning s1
-        s1 = s1.intern();
-
-        // After interning
-        System.out.println(s1 == s2); // true, same reference
-    }
-}
-
-```
 
 ```
 18. Write a program to remove duplicates from any array ?
