@@ -320,6 +320,7 @@ public class Main {
 164. SQL queries with group by
 165. Primary Key Vs Unique Key in database ?
 166. What are triggers in database ?
+- https://www.youtube.com/watch?v=QgTI3DoVwzE&t=343s
 167. SQL query to fetch the name of employee who earn the highest salary ?
 ```
 ```
