@@ -107,3 +107,30 @@ public class InternExample {
 ```
 ### 14. What is difference between Stringbuffer and Stringbuffer in java ?
 ![string](/images/stringbuilder.jpg)
+
+
+## Java program to check whether a string is a Palindrome.
+
+```java
+package com.string;
+
+public class CheckPalindromeString {
+	
+	public static void main(String[] args) {
+		String str = "MADAM";
+		
+		//reverse string 
+		String rev = "";
+		for(int i = str.length()-1;i>=0;i--) {
+			rev = rev + str.charAt(i);
+		}
+		System.out.println(rev);
+		
+		if(str.equals(rev)) {
+			System.out.println("String is Palindrome !!");
+		}else {
+			System.out.println("String is Not Palindrome !!");
+		}
+	}
+}
+```
