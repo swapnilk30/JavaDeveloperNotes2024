@@ -122,7 +122,25 @@ implementation class.
 25. In which scenario you will use parallel stream in java 8 ?
 26. Have you used parallel streams as well ?
 27. How does lambda expression relates to functional interfaces ?
-28. Can you tell me 3 terminal operators used in streams ?
+```
+
+### 28. Can you tell me 3 terminal operators used in streams ?
+- forEach()
+```
+list.stream().forEach(System.out::println);
+
+```
+- collect()
+```
+List<String> result = list.stream().collect(Collectors.toList());
+
+```
+- reduce()
+```
+Optional<Integer> sum = list.stream().reduce(Integer::sum);
+
+```
+```
 29. What are the other features of Java 8 you have used while coding ?
 30. Can you iterate and remove the element of ArrayList at the same time ?
 31. what was log4j vulnerability?, how to fix log4j vulnerability ?
