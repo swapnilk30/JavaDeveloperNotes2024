@@ -15,10 +15,33 @@
 ```
 
 ### 12. List of diff strings, how to concat all string and create a new string ?
-```
-List<String> strings = List.of("Hello", "World", "Java", "is", "awesome");
-```
 
+```
+List<String> strings = Arrays.asList("Hello", "World", "Java", "is", "awesome");
+```
+```java
+public class ConcatenatingAllString {
+	
+	public static void main(String[] args) {
+		
+		List<String> strings = Arrays.asList("Hello", "World", "Java", "is", "awesome");
+		
+		
+		/* Using StringBuilder: This is the most efficient method for concatenating strings in a loop
+		 *  because it avoids the creation of many temporary String objects.
+		 */
+		StringBuilder sb = new StringBuilder();
+		
+		for(String s :strings) {
+			sb.append(s);
+		}
+		
+		String result = sb.toString();
+		System.out.println(result);
+		
+	}
+}
+```
 
 
 
