@@ -1171,6 +1171,14 @@ public class SumOfEvenOdd {
 
 # Hibernate
 
+### What is hibernate?
+- Hibernate is an open-source and lightweight ORM tool that is used to store, manipulate, and retrieve data from the database.
+
+### What is ORM?
+- ORM is an acronym for Object/Relational mapping.
+- It is a programming strategy to map object with the data stored in the database. 
+- It simplifies data creation, data manipulation, and data access.
+
 ### Define persistent classes.
 - Classes whose objects are stored in a database table are called as persistent classes.
 
