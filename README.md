@@ -555,26 +555,6 @@ public class MapExample {
 https://www.youtube.com/watch?v=Mf7hSRZsHFs
 ```
 
-## Find the second largest number in a list of integers using stream ?
-```java
-public class SecondHighestNumber {
-	
-	public static void main(String[] args) {
-		
-		List<Integer> list = Arrays.asList(1,1,1,2,4,3,4,6,7,8,0,9,3,21,1);
-		
-		//Find the second largest number of a list
-		
-		Optional<Integer> findFirst = list.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst();
-		
-		Integer integer = findFirst.get();
-		
-		System.out.println(integer);
-		
-	}
-}
-```
-
 ```
 -Method overloading in depth
 https://www.youtube.com/watch?v=e1QJKOGLwj4
@@ -712,25 +692,6 @@ if it exists ,then it will reference the existing string rather than creating a 
     
     This command will compile the source code, run tests, and package the project into the specified format (usually a JAR file).
 ```
-
-
-### Wap to print 1 to 100 numbers using Stream Api
-
-```java
-public class PrintOneToHundread {
-
-	public static void main(String[] args) {
-	
-		// Wap to print 1 to 100 numbers using Stream Api
-		
-		IntStream.range(1, 101).forEach(x->System.out.println(x));
-		
-	}
-}
-
-```
-
-
 
 # MultiThreading
 

@@ -1,7 +1,26 @@
+
+### Wap to print 1 to 100 numbers using Stream Api
+
+```java
+public class PrintOneToHundread {
+
+	public static void main(String[] args) {
+	
+		// Wap to print 1 to 100 numbers using Stream Api
+		
+		IntStream.range(1, 101).forEach(x->System.out.println(x));
+		
+	}
+}
+
+```
+
+
+
 ### Wap to get Min and Max element
     int[] arr = {3,7,1,4,6,2,5};
 
-    
+
 ```java
 public class MinMax{
 
@@ -55,4 +74,24 @@ public class SumOfEvenOdd {
     List<Integer> list = Arrays.asList(20,15,80,11,48,25,98,32,17);
 
     list.stream().map(s -> s.toString()).filter(s -> s.startsWith("1")).forEach(System.out::println);
+```
+
+## Find the second largest number in a list of integers using stream ?
+```java
+public class SecondHighestNumber {
+	
+	public static void main(String[] args) {
+		
+		List<Integer> list = Arrays.asList(1,1,1,2,4,3,4,6,7,8,0,9,3,21,1);
+		
+		//Find the second largest number of a list
+		
+		Optional<Integer> findFirst = list.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst();
+		
+		Integer integer = findFirst.get();
+		
+		System.out.println(integer);
+		
+	}
+}
 ```
