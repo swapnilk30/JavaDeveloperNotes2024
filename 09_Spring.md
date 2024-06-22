@@ -33,3 +33,7 @@
     - 3.`@ComponentScan`: Instructs Spring to scan the specified packages for components (such as @Component, @Service, @Repository, etc.) so that they can be automatically registered and used by the Spring application context.
 
     By combining these three annotations into @SpringBootApplication, developers can create a standalone Spring Boot application with minimal configuration. It's often used to bootstrap a Spring Boot application and launch it from the main method.
+
+
+### Dependency Injection : Setter Based and Constructor based , and Field Injection.
+- Autowiring : ByType , ByName
