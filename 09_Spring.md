@@ -47,3 +47,6 @@ context as a Spring Bean.
 - allows Spring to detect our custom beans automatically.
 - Spring has provided a few specialized stereotype annotations: @Controller, @Service and @Repository.
 - They all provide the same function as @Component.
+
+### 2.@Service
+- It is also used at class level. It tells the Spring that class contains the business logic.
