@@ -50,3 +50,50 @@ context as a Spring Bean.
 
 ### 2.@Service
 - It is also used at class level. It tells the Spring that class contains the business logic.
+
+
+
+
+
+```
+interface IReport{ 
+    void generateReport();
+}
+
+@Component("pdf")
+class PdfReport implements IReport{
+
+    public void generateReport(){
+        System.out.print("generating pdf report...");
+    }
+}
+
+@Component("excel")
+//@Primary
+class ExcelReport implements IReport{
+
+    public void generateReport(){
+        System.out.print("generating excel report...");
+    }
+}
+
+@Service
+class ReportService{
+
+    @Autowired
+    @Qualifier("excel")
+    private IReport report;
+
+    //private IReport excelReport;
+    //private IReport pdfReport;
+
+    public void downloadReport(){
+        report.generateReport();
+    }
+
+}
+
+### @Autowired
+### @Primary
+### @Qualifier
+```
