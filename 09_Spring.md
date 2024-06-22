@@ -26,10 +26,10 @@
 
 - Here's a brief overview of what each of these annotations does:
 
-    1.`@Configuration`: Indicates that the class is a source of bean definitions for the application context. It allows defining beans using Java-based configuration instead of XML.
+    - 1.`@Configuration`: Indicates that the class is a source of bean definitions for the application context. It allows defining beans using Java-based configuration instead of XML.
 
-    2.`@EnableAutoConfiguration`: Tells Spring Boot to automatically configure the Spring application based on its dependencies. This annotation triggers Spring Boot's auto-configuration mechanism, which attempts to guess and configure beans based on the classpath and various property settings.
+    - 2.`@EnableAutoConfiguration`: Tells Spring Boot to automatically configure the Spring application based on its dependencies. This annotation triggers Spring Boot's auto-configuration mechanism, which attempts to guess and configure beans based on the classpath and various property settings.
 
-    3.`@ComponentScan`: Instructs Spring to scan the specified packages for components (such as @Component, @Service, @Repository, etc.) so that they can be automatically registered and used by the Spring application context.
+    - 3.`@ComponentScan`: Instructs Spring to scan the specified packages for components (such as @Component, @Service, @Repository, etc.) so that they can be automatically registered and used by the Spring application context.
 
     By combining these three annotations into @SpringBootApplication, developers can create a standalone Spring Boot application with minimal configuration. It's often used to bootstrap a Spring Boot application and launch it from the main method.
