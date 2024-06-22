@@ -37,3 +37,13 @@
 
 ### Dependency Injection : Setter Based and Constructor based , and Field Injection.
 - Autowiring : ByType , ByName
+
+
+### 1.@Component
+- It is a class-level annotation. It is used to mark a Java class as a bean.
+- A Java class annotated with @Component is found during the classpath.
+- The Spring Framework pick it up and configure it in the application
+context as a Spring Bean.
+- allows Spring to detect our custom beans automatically.
+- Spring has provided a few specialized stereotype annotations: @Controller, @Service and @Repository.
+- They all provide the same function as @Component.
