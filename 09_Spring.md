@@ -114,3 +114,36 @@ private String appVersion;
 ```
 - Here, we are providing the default value as version1 seperated with : (colon).
 - If the property is not present in the application.properties file then it will take the default value instead of throwing the exception.
+
+### @RestController Annotation
+- @RestController annotation is mainly used for building restful web services using Spring MVC.
+- It is a convenience annotation, this annotation itself annotated with @ResponseBody and @Controller annotation.
+- The class annotated with @RestController annotation returns JSON response in all the methods.
+- It does not work with view technology so that the method does not return ModelAndView.
+
+### @RequestMapping annotation
+- @RequestMapping is the most common and widely used annotation in Spring MVC.
+- It is used to map web requests onto specific handler classes and/or handler methods.
+- @RequestMapping can be applied to the controller class as well as methods.
+- It has the following optional options
+    - name: Assign a name to this mapping.
+    - value:  The primary mapping expressed by this annotation.
+    - method: The HTTP request methods to map to
+    - headers: The headers of the mapped request, narrowing the primary mapping.
+
+```java
+@Controller
+@RequestMapping("/users")
+public class UserController {
+
+	@RequestMapping("/user")
+	public String getUser() {
+		
+	}
+    // alternative way 
+    @RequestMapping(value={"/user","/user1","/user2"},method=RequestMethod.GET)
+	public String getUser() {
+		
+	}
+}
+```
