@@ -98,7 +98,7 @@ class ReportService{
 ### @Qualifier
 ```
 
-### @Value annotation
+### @Value Annotation
 - '@Value' annotation is used to read the properties from the application.properties file inside the spring boot.
 - This annotation can be applied to a fields.
 ```
@@ -129,7 +129,7 @@ private String appVersion;
 - The class annotated with @RestController annotation returns JSON response in all the methods.
 - It does not work with view technology so that the method does not return ModelAndView.
 
-### @RequestMapping annotation
+### @RequestMapping Annotation
 - @RequestMapping is the most common and widely used annotation in Spring MVC.
 - It is used to map web requests onto specific handler classes and/or handler methods.
 - @RequestMapping can be applied to the controller class as well as methods.
