@@ -115,6 +115,14 @@ private String appVersion;
 - Here, we are providing the default value as version1 seperated with : (colon).
 - If the property is not present in the application.properties file then it will take the default value instead of throwing the exception.
 
+
+### @Controller Annotation
+- @Controller annotation acts as a controller in the MVC design pattern. 
+- It indicates that the particular class serves the role of controller.
+- It contains methods that are annotated with @RequestMapping annotation with URL mappings that are triggered for web requests.
+- It works with view technology, so the method returns ModelAndView.
+
+
 ### @RestController Annotation
 - @RestController annotation is mainly used for building restful web services using Spring MVC.
 - It is a convenience annotation, this annotation itself annotated with @ResponseBody and @Controller annotation.
