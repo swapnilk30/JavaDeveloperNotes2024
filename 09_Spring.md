@@ -97,3 +97,20 @@ class ReportService{
 ### @Primary
 ### @Qualifier
 ```
+
+### @Value annotation
+- '@Value' annotation is used to read the properties from the application.properties file inside the spring boot.
+- This annotation can be applied to a fields.
+```
+@Value("${app.name}")
+private String appName;
+
+```
+-  If the property is not present in the application.properties file then spring will throw an exception, when we run the application.
+- We can also provide default values for properties using @Value annotation
+```
+@Value("${app.version:version1}")
+private String appVersion;
+```
+- Here, we are providing the default value as version1 seperated with : (colon).
+- If the property is not present in the application.properties file then it will take the default value instead of throwing the exception.
