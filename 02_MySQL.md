@@ -73,6 +73,8 @@ INSERT INTO employees(empName,empSalary) VALUES('Charlie Davis', 45000.00);
 
 SELECT * FROM employees;
 
+ALTER TABLE employees ADD empAge int;
+
 ```
 
 ## To fetch only the first 10 records from a MySQL database, you can use the `LIMIT` clause in your SQL query.
