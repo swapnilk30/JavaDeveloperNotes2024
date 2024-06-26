@@ -256,3 +256,24 @@ public interface UserRepository extends JpaRepository<User, String>{
 ```
 
 
+
+### Given two integer arrays firstArray and secondArray,return an array of their intersection using java 8.
+	each element in result must be unique and you may return the result in any array
+	Example : int firstArray={4,9,5};
+		int secondArray[]={9,4,9,8,4};
+		output : [9,4]
+```java
+public class IntersectionOfTwoArrays {
+
+	public static void main(String[] args) {
+
+		int firstArray[]= {4,9,5};
+		int secondArray[]= {9,4,9,8,4};
+		
+		Arrays.stream(firstArray).filter(x->Arrays.stream(secondArray)
+				.anyMatch(y->y==x))
+					.distinct().forEach(System.out::println);
+	}
+}
+
+```
