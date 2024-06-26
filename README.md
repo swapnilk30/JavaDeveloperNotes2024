@@ -109,14 +109,17 @@ implementation class.
 
 ```
 10. Write a program to reverse a string ?
-```
-
-
-
-```
 18. Write a program to remove duplicates from any array ?
+46. Lets say you have two variable a and b, with values 5 and 10. Interchange value of a and b without using a temporary variable ? Will the program work for negative numbers ?
+```
+
+
+
+```
+
 19. How do you break a singleton pattern ?
 20. How do prevent a singleton pattern from breaking ?
+
 21. What are new features of java 8 ?
 22. What is Lambda expression in Java 8 ?
 23. What is metaspace in java 8 ?
@@ -180,6 +183,7 @@ public class Main {
 
 ```
 31. what was log4j vulnerability?, how to fix log4j vulnerability ?
+
 32. Can you tell me how hashmap internally works ?
 33. What is concurrent hashmap ?
 34. What is weak hashmap ?
@@ -194,9 +198,12 @@ public class Main {
 
 44. Explain lamda expression and functional expressions ?
 45. Why we are using functional annotation for functional interface
-46. Lets say you have two variable a and b, with values 5 and 10. Interchange value of a and b without using a temporary variable ? Will the program work for negative numbers ?
+
+
+
 47. If catch is not present, only finally is present, will the code work ?
 48. multiple catch with single finally will work ?
+
 49. If insert can happen by PUT why do we have POST
 50. can we fetch data with the help of POST ?
 ```
@@ -204,8 +211,11 @@ public class Main {
 ```
 51. What is functional interface in  java ?
 52. Explain some of the functional interfaces which are used in java ?
+
 53. How to make class threadsafe ?
+
 54. What is Eureka Server
+
 55. How do u create custom exceptions ?
 56. When will you get 415 & 504 http response code ?
 57. Email field has not null contrainst, how to remove not null constraint from not null column
@@ -216,10 +226,13 @@ public class Main {
 62. What is Fault tolerance
 63. Jwt authentication related questions
 64. Heap Memory and JVM
+
 65. How do you create HTTP POST request in Java
 66. What is the use of super keyword
 67. What is throw, throws and when do we use these ?
+
 68. What is synchronization ?
+
 69. What is a treeset ?
 70. Explain the role of API Gateway in a microservices architecture ?
 71. Explain functional interface and what are some of the available interface ?
