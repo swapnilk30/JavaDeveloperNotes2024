@@ -18,6 +18,13 @@
     A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
 
 
+## What is the Difference between Primary Key and Unique Key
+- UNIQUE KEY allows NULL values
+- PRIMARY KEY does not allow NULL values.
+- There is only One Primary Key per Table but you can have Multiple Unique Keys per Table.
+
+
+
 ## INDEX
 - Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
 
