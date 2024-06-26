@@ -1095,3 +1095,10 @@ https://www.youtube.com/watch?v=lMDZ6dple9Q
 
 ## SpringBoot Logging
 https://www.youtube.com/watch?v=awV2rVy-i_8
+
+
+## Java Stream API Interview Questions
+https://javatechonline.com/java-stream-api-interview-questions/
+
+## Java 8 Coding Interview Questions
+https://javatechonline.com/java-8-coding-interview-questions-java/
