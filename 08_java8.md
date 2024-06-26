@@ -304,3 +304,6 @@ public class IntersectionOfTwoArrays {
 }
 
 ```
+
+## find highest salary of an employee from each department
+## find the average salary of each department using java 8 Stream API?
