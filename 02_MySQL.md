@@ -1,3 +1,22 @@
+## What is a PRIMARY KEY ?
+
+    The PRIMARY KEY constraint uniquely identifies each record in a table.
+    Primary keys must contain UNIQUE values, and cannot contain NULL values.
+
+    A table can not have more than one primary key.
+
+    Rules for defining primary key:
+        -two rows cant have the same primary key value.
+        -the primary key field cannot be null.
+        -the value in a primary key column can never be 
+            modified or updated if any foreign key refers to that primary key.
+        
+## What is the FOREIGN KEY ?
+
+    FOREIGN KEY is a column that creates a relationship between two tables.
+    
+    A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+
 
 ## INDEX
 - Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
