@@ -44,7 +44,9 @@ public class ConcatenatingAllString {
 ```
 ```java
 /*Using Collectors.joining: If you are using Java 8 or later, 
- * you can use the Collectors.joining method with streams to concatenate strings.*/
+ * you can use the Collectors.joining method with streams to concatenate strings.
+	- Collectors.joining() joins the characters back into a single string. 
+ */
 
 public class ConcatenatingAllString {
 	
