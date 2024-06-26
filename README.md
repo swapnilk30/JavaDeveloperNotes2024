@@ -1087,3 +1087,11 @@ public class Main {
 
 - https://www.youtube.com/watch?v=UdU8CbWPOko
 
+## Spring Boot Profiles
+https://www.youtube.com/watch?v=I8r858beW0o
+
+## Spring Boot Actuator
+https://www.youtube.com/watch?v=lMDZ6dple9Q
+
+## SpringBoot Logging
+https://www.youtube.com/watch?v=awV2rVy-i_8
