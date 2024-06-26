@@ -1,5 +1,5 @@
 ```
-1. Which version of java are you using ?
+
 4. Can you override static method in java ?
 5. Why java does not support operator overloading ?
 6. Why String is immutable in java ?
