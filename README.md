@@ -1083,13 +1083,7 @@ public class Main {
 
 
 
-### @Component annotation
 
-### @Controller annotation
-
-### @RestController annotation
-
-### @RequestMapping annotation
 
 - https://www.youtube.com/watch?v=UdU8CbWPOko
 
