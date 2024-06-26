@@ -14,8 +14,35 @@ public class PrintOneToHundread {
 }
 
 ```
-
-
+### Wap to sum of list using java 8
+```java
+public class SumExample {
+	
+	public static void main(String[] args) {
+		
+		int[] arr = {3,7,1,4,6,2,5};
+		
+		int sum = Arrays.stream(arr).sum();
+		
+		System.out.println(sum);
+		
+		List<Integer> list = Arrays.asList(3,7,1,4,6,2,5);
+		
+		// Using IntStream sum method
+		int sum2 = list.stream().mapToInt(Integer::intValue).sum();
+		
+		System.out.println(sum2);
+		
+		// Using Stream API with reduce method
+		int sum3 = list.stream().reduce(0,Integer::sum);
+		
+		System.out.println(sum3);
+		
+		// Using Collectors.summingInt
+		int sum4 = list.stream().collect(Collectors.summingInt(Integer::intValue));	
+	}
+}
+```
 
 ### Wap to get Min and Max element
     int[] arr = {3,7,1,4,6,2,5};
