@@ -1102,3 +1102,6 @@ https://javatechonline.com/java-stream-api-interview-questions/
 
 ## Java 8 Coding Interview Questions
 https://javatechonline.com/java-8-coding-interview-questions-java/
+
+## SQL for Beginners (MySQL)
+- https://www.youtube.com/playlist?list=PLUDwpEzHYYLvWEwDxZViN1shP-pGyZdtT
