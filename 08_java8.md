@@ -308,3 +308,5 @@ public class IntersectionOfTwoArrays {
 ## find highest salary of an employee from each department
 - https://www.youtube.com/watch?v=okPecNk797Y
 ## find the average salary of each department using java 8 Stream API?
+## Find Nth Highest Salary Using Java Streams API | unique and duplicate records
+- https://www.youtube.com/watch?v=X80i0QHRByQ
