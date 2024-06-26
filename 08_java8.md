@@ -174,3 +174,85 @@ List<Employee> sortedAsc = employees.stream().sorted((o1,o2)->(int)(o2.getSalary
 https://www.youtube.com/watch?v=BIQvBe0KYKI
 
 ```
+
+
+```
+Features of Java 8
+What is the Use Of Optional Class in java
+```
+
+
+# What is the Optional class in Java 8?
+- The Optional class in Java 8 is a container object that may or may not contain a value.
+- **It is used to avoid null pointer exceptions.**
+- If a value is present, isPresent() will return true.
+- get() will return the value otherwise throws **NoSuchElementException**.
+
+```java
+/*you might encounter a Null Pointer Exception when you try to invoke a method or access a field on a variable that is null.
+ Null Pointer Exceptions can be common sources of bugs in programs,
+ especially if proper null checks are not performed before accessing object references.
+*/
+public class OptionalExample {
+	
+	public static void main(String[] args) {
+		
+		String str = null;
+		int length = str.length(); // This line will throw a NullPointerException
+	}
+}
+
+// To Handle Above NullPointerException we have to Check null using if else 
+
+public class OptionalExample {
+	
+	public static void main(String[] args) {
+		
+		String str = null;
+		//int length = str.length(); // This line will throw a NullPointerException
+	
+		if(str == null) {
+			System.out.println("this is null object");
+		}else {
+			System.out.println(str.length());
+		}
+	}
+}
+```
+#### Handle Using Optional Class
+```java
+public class OptionalExample {
+	
+	public static void main(String[] args) {
+		
+		String str = null;
+		//int length = str.length(); // This line will throw a NullPointerException
+		
+		Optional<String> optional = Optional.ofNullable(str);
+		
+		System.out.println(optional.isPresent());// false
+		
+		//System.out.println(optional.get());// Exception in thread "main" java.util.NoSuchElementException: No value present
+		
+		System.out.println(optional.orElse("No value present"));
+	}
+}
+```
+
+```java
+// Example : Used in project 
+
+@Repository
+public interface UserRepository extends JpaRepository<User, String>{
+
+	Optional<User> findByEmail(String username);
+
+}
+
+
+{
+	User user = userRepository.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User not found by Given Id !!"));
+}
+```
+
+
