@@ -1124,3 +1124,8 @@ https://www.youtube.com/playlist?list=PLUDwpEzHYYLvWEwDxZViN1shP-pGyZdtT
 
 ## Enable HTTPS in Spring Boot Application
 https://www.youtube.com/watch?v=emhAf7srIeg
+
+
+### What is Exception in Java ?
+- Exception is a unwanted event which disturbs the normal flow of execution.
+- exception is an abnormal condition that occurs during the execution of program to stop the entire flow of application.
