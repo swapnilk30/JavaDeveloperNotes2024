@@ -157,6 +157,15 @@ public class UserController {
 ```
 
 
+
+## Difference between @Component vs @Bean in Spring Boot
+## Difference between @PathVariable and @RequestParam In Spring Boot
+
+
+
+
+
+
 ## Pagination in Springboot
 - Implementing pagination in Spring Boot can be achieved using Spring Data JPA's built-in pagination capabilities. 
 - Here is a step-by-step guide on how to do this:
