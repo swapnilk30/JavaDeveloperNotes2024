@@ -155,3 +155,9 @@ public class UserController {
 	}
 }
 ```
+
+
+## Pagination 
+- Implementing pagination in Spring Boot can be achieved using Spring Data JPA's built-in pagination capabilities. 
+- Here is a step-by-step guide on how to do this:
+    1. Set Up Your Spring Boot Project
