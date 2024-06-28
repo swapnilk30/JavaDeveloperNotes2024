@@ -162,8 +162,9 @@ public class UserController {
 ## Difference between @PathVariable and @RequestParam In Spring Boot
 
 ### @PathVariable
-
-
+- Extract values from the URI Path.
+### @RequestParam
+- Extract values from the query.
 
 
 
