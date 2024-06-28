@@ -87,3 +87,14 @@ SELECT * FROM your_table_name LIMIT 10;
 ```sql
 SELECT * FROM your_table_name ORDER BY id DESC LIMIT 10;
 ```
+
+
+```
+https://www.sql-practice.com/
+SELECT * FROM patients
+
+-- Show the city and the total number of patients in the city.
+--Order from most to least patients and then by city name ascending.
+
+select city ,count(patient_id) as TOTAL_NUMBER FROM patients group by CITY order by TOTAL_NUMBER ;
+```
