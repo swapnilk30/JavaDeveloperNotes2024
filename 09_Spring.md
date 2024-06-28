@@ -237,3 +237,25 @@ http://localhost:8080/employees?page=0&size=10
 ```
 
 
+## What Is Spring Boot Actuator? What is its purpose?
+- Actuator enables production ready features in a Spring Boot application.
+- These features allow us to monitor and manage applications when they are running in production.
+- Some of the features are health, metrics, info, dump, env, etc. 
+- It uses HTTP endpoints or JMX beans to enable us to interact with it.
+- In order to enable Spring Boot Actuator, we just need to add the spring-boot-actuator dependency to our pom.xml as shown below.
+```XML
+<dependency>
+      <groupId>org.springframework.boot</groupId> 
+      <artifactId>spring-boot-starter-actuator</artifactId> 
+</dependency>
+```
+- Below are some of the most commonly used built-in endpoints that an Actuator provides:
+
+    env: represents environmental properties
+    health: displays application’s health condition
+    httptrace: shows HTTP trace information
+    info: displays application’s basic information
+    metrics: displays application’s metrics information
+    mappings: shows a list of all @RequestMapping paths in the application
+    beans: displays a complete list of all the Spring beans in the application
+    shutdown: allows the application to be gracefully shutdown
