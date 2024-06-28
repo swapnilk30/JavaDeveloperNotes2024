@@ -160,8 +160,10 @@ public class UserController {
 ## Pagination 
 - Implementing pagination in Spring Boot can be achieved using Spring Data JPA's built-in pagination capabilities. 
 - Here is a step-by-step guide on how to do this:
-    1. Set Up Your Spring Boot Project
-    2. Define Your Entity
+1. Set Up Your Spring Boot Project
+
+2. Define Your Entity
+
 ```java
 @Entity
 public class Employee {
@@ -174,8 +176,9 @@ public class Employee {
     // Getters and setters
 }
 ```
-    3. Create a Repository
-    - Create a repository interface for your entity. Extend PagingAndSortingRepository or JpaRepository to get pagination capabilities.
+3. Create a Repository
+- Create a repository interface for your entity. Extend PagingAndSortingRepository or JpaRepository to get pagination capabilities.
+
 ```java
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
