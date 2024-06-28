@@ -1119,4 +1119,8 @@ https://javatechonline.com/java-stream-api-interview-questions/
 https://javatechonline.com/java-8-coding-interview-questions-java/
 
 ## SQL for Beginners (MySQL)
-- https://www.youtube.com/playlist?list=PLUDwpEzHYYLvWEwDxZViN1shP-pGyZdtT
+https://www.youtube.com/playlist?list=PLUDwpEzHYYLvWEwDxZViN1shP-pGyZdtT
+
+
+## Enable HTTPS in Spring Boot Application
+https://www.youtube.com/watch?v=emhAf7srIeg
