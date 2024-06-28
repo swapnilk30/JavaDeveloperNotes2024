@@ -161,6 +161,8 @@ public class UserController {
 ## Difference between @Component vs @Bean in Spring Boot
 ## Difference between @PathVariable and @RequestParam In Spring Boot
 
+### @PathVariable
+
 
 
 
