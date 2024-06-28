@@ -157,7 +157,7 @@ public class UserController {
 ```
 
 
-## Pagination 
+## Pagination in Springboot
 - Implementing pagination in Spring Boot can be achieved using Spring Data JPA's built-in pagination capabilities. 
 - Here is a step-by-step guide on how to do this:
 1. Set Up Your Spring Boot Project
@@ -176,11 +176,50 @@ public class Employee {
     // Getters and setters
 }
 ```
+
 3. Create a Repository
-- Create a repository interface for your entity. Extend PagingAndSortingRepository or JpaRepository to get pagination capabilities.
+- Create a repository interface for your entity.
+- Extend PagingAndSortingRepository or JpaRepository to get pagination capabilities.
 
 ```java
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
 }
+```
+4. Implement the Service Layer
+- Create a service class to handle business logic. In this service, you'll use the repository to fetch paginated data.
+
+```java
+@Service
+public class EmployeeService {
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
+    public Page<Employee> getEmployees(int page, int size) {
+        return employeeRepository.findAll(PageRequest.of(page, size));
+    }
+}
+```
+5. Create a Controller
+- Create a REST controller to expose an API endpoint for fetching paginated data.
+```java
+@RestController
+public class EmployeeController {
+    @Autowired
+    private EmployeeService employeeService;
+
+    @GetMapping("/employees")
+    public Page<Employee> getEmployees(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+        return employeeService.getEmployees(page, size);
+    }
+}
+```
+6. Testing
+- Run your Spring Boot application and test the pagination functionality. You can use a tool like Postman or simply navigate to the URL in your browser:
+
+```
+http://localhost:8080/employees?page=0&size=10
+
 ```
