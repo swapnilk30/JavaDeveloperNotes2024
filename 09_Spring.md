@@ -259,3 +259,12 @@ http://localhost:8080/employees?page=0&size=10
     mappings: shows a list of all @RequestMapping paths in the application
     beans: displays a complete list of all the Spring beans in the application
     shutdown: allows the application to be gracefully shutdown
+
+## Springboot Logging
+- Logging is a process of storing application execution details.
+- TRACE => DEBUG => INFO => WARN => ERROR => FATAL
+- In SpringBoot the default log level is 'INFO'
+
+```
+logging.level.root=debug
+```
