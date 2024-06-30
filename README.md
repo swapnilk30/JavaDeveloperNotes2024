@@ -458,12 +458,14 @@ https://www.myjavainterview.in/core-java
 ## What are Object class methods?
 ```
 getClass()
-hashCode()
+
+int hashCode()
+
 wait()
 notify()
 notifyAll()
 
-toString() 
+String toString() 
 - Returns a string representation of the object.
 
 clone()
