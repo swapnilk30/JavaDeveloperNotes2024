@@ -467,6 +467,8 @@ notifyAll()
 
 String toString() 
 - Returns a string representation of the object.
+- It is recommended that all subclasses override this method.
+
 
 clone()
 equals()
