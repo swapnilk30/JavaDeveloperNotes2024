@@ -462,7 +462,10 @@ hashCode()
 wait()
 notify()
 notifyAll()
-toString()
+
+toString() 
+- Returns a string representation of the object.
+
 clone()
 equals()
 finalize()
