@@ -135,13 +135,7 @@ implementation class.
 19. How do you break a singleton pattern ?
 20. How do prevent a singleton pattern from breaking ?
 
-21. What are new features of java 8 ?
-22. What is Lambda expression in Java 8 ?
-23. What is metaspace in java 8 ?
-24. What is use of functional interface in Java 8 ?
-25. In which scenario you will use parallel stream in java 8 ?
-26. Have you used parallel streams as well ?
-27. How does lambda expression relates to functional interfaces ?
+
 ```
 
 ### 28. Can you tell me 3 terminal operators used in streams ?
