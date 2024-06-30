@@ -3,9 +3,24 @@
 4. Can you override static method in java ?
 5. Why java does not support operator overloading ?
 
-13. Why char array is preferred to store password than string in java ?
 
+```
+```
+### Why char array is preferred to store password than string in java ?
+- In Java, using a char[] array to store passwords is preferred over String for several reasons:
 
+1. Mutability: String is immutable, meaning once it's created, it cannot be changed. This can lead to sensitive data like passwords remaining in memory longer than necessary, increasing the risk of exposure.
+
+2. Explicit Clearing: With a char[], you can explicitly overwrite the array (e.g., by setting all elements to zero) after use, which helps minimize the time the sensitive data is in memory.
+
+3. Memory Visibility: Strings are stored in the String pool, making them more likely to be visible in memory dumps or garbage collection logs. char[] does not have this issue.
+
+4. Garbage Collection: Since String objects remain until they are garbage collected, passwords may stay in memory longer, while char[] can be cleared promptly.
+
+- These factors contribute to using char[] for better security and control over sensitive information like passwords.
+
+```
+```
 # SERIALIZATION
 
 1. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
