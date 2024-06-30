@@ -112,7 +112,7 @@ public class InternExample {
     }
 }
 ```
-### 14. What is difference between Stringbuffer and Stringbuffer in java ?
+### 14. What is difference between StringBuffer and StringBuilder in java ?
 ![string](/images/stringbuilder.jpg)
 
 
