@@ -2,15 +2,15 @@
 
 4. Can you override static method in java ?
 5. Why java does not support operator overloading ?
-6. Why String is immutable in java ?
-7. Is String is thread safe in java ?
-8. What is string tokenizer ?
-
 
 13. Why char array is preferred to store password than string in java ?
 
-15. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
+
+# SERIALIZATION
+
+1. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
 - https://www.youtube.com/shorts/IpwvQlyyEDY
+
 16. How to create immutable class in java ?
 ```
 

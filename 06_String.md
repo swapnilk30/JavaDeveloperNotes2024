@@ -1,3 +1,10 @@
+```
+1 Why String is immutable in java ?
+2. Is String is thread safe in java ?
+3. What is string tokenizer ?
+```
+
+
 ### What is String class?
 - String is the final class that represents sequence of character.
 - It is present in Package is Java.Lang.
