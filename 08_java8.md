@@ -27,7 +27,8 @@ Stream<String> nameStream = names.stream();
 //Apply the filter() method:
 Stream<String> filteredStream = nameStream.filter(name -> name.startsWith("A"));
 
-- he filter() method takes a Predicate as an argument. A Predicate is a functional interface that has a method boolean test(T t) which returns true or false.
+- The filter() method takes a Predicate as an argument.
+- A Predicate is a functional interface that has a method boolean test(T t) which returns true or false.
 
 // Collect or process the filtered elements:
 List<String> filteredNames = filteredStream.collect(Collectors.toList());
