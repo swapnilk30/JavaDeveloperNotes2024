@@ -57,7 +57,7 @@ List<String> filteredNames = filteredStream.collect(Collectors.toList());
 
 ```
 
-## distinct() filters out duplicate elements from the stream.
+## distinct() - filters out duplicate elements from the stream.
 ```java
 public class DistinctEx {
 	
