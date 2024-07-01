@@ -12,6 +12,28 @@
 - The Operations which return another stream as a result are called intermediate operations.
 - filter(), map(), distinct(), sorted(), limit(), skip()
 
+```
+- The filter() method in the Stream API of Java is used to filter elements of a stream based on a given predicate.
+- This method returns a new stream that consists of elements that match the predicate.
+
+Stream<T> filter(Predicate<? super T> predicate)
+
+// Example :
+List<String> names = List.of("Alice", "Bob", "Charlie", "David", "Eve");
+
+// Create a stream: 
+Stream<String> nameStream = names.stream();
+
+//Apply the filter() method:
+Stream<String> filteredStream = nameStream.filter(name -> name.startsWith("A"));
+
+- he filter() method takes a Predicate as an argument. A Predicate is a functional interface that has a method boolean test(T t) which returns true or false.
+
+// Collect or process the filtered elements:
+List<String> filteredNames = filteredStream.collect(Collectors.toList());
+
+```
+
 ## distinct() filters out duplicate elements from the stream.
 ```java
 public class DistinctEx {
