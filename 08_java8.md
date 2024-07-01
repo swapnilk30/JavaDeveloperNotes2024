@@ -1,4 +1,9 @@
 ```
+Java Streams (Stream API in Java)
+https://www.youtube.com/playlist?list=PLUDwpEzHYYLvTPVqVIt7tlBohABLo4gyg
+```
+
+```
 21. What are new features of java 8 ?
 22. What is Lambda expression in Java 8 ?
 23. What is metaspace in java 8 ?
@@ -6,6 +11,15 @@
 25. In which scenario you will use parallel stream in java 8 ?
 26. Have you used parallel streams as well ?
 27. How does lambda expression relates to functional interfaces ?
+```
+
+```
+Predefined Functional Interfaces  :
+
+    Predicate 
+    Function
+    Consumer
+    Supplier
 ```
 
 ## What is an Intermediate operation
