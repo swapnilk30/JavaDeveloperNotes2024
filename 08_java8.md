@@ -8,7 +8,37 @@
 27. How does lambda expression relates to functional interfaces ?
 ```
 
+## distinct() filters out duplicate elements from the stream.
+```java
+public class DistinctEx {
+	
+	public static void main(String[] args) {
+		
+		int[] arr = {3,7,4,6,2,5,1,4,6,2,5};
+		
+		List<Integer> list = Arrays.asList(3,5,4,6,2,5,6,8,9);
+		
+		List<String> fruits = Arrays.asList("Banana","Orange","Mango","Kiwi","Apple","Orange","Mango");
+		
+		// To get the distinct elements as an array
+		
+		int[] distinctArray = Arrays.stream(arr).distinct().toArray();
+		
+		System.out.println(Arrays.toString(distinctArray));
+		
+		//
+		List<Integer> diList = list.stream().distinct().collect(Collectors.toList());
+		
+		System.out.println(diList);
+		
+		//
+		List<String> distinctList = fruits.stream().distinct().collect(Collectors.toList());
+		
+		System.out.println(distinctList);
+	}
+}
 
+```
 
 ### Wap to print 1 to 100 numbers using Stream Api
 
