@@ -29,6 +29,8 @@ Predefined Functional Interfaces  :
     doesn’t have the name, return type and access modifiers.
     • Lambda Expression also known as anonymous functions or closures.
 
+## Stream API
+- to process the data from collection we use streams concepts.
 
 ## What is an Intermediate operation
 - The Operations which return another stream as a result are called intermediate operations.
