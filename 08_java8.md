@@ -22,6 +22,14 @@ Predefined Functional Interfaces  :
     Supplier
 ```
 
+## What is Lambda Expression (λ):
+
+### The Main Objective of Lambda Expression is to bring benefits of functional programming into Java.
+    • Lambda Expression is just an anonymous (nameless) function. That means the function which
+    doesn’t have the name, return type and access modifiers.
+    • Lambda Expression also known as anonymous functions or closures.
+
+
 ## What is an Intermediate operation
 - The Operations which return another stream as a result are called intermediate operations.
 - filter(), map(), distinct(), sorted(), limit(), skip()
