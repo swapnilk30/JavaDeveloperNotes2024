@@ -8,6 +8,10 @@
 27. How does lambda expression relates to functional interfaces ?
 ```
 
+## What is an Intermediate operation
+- The Operations which return another stream as a result are called intermediate operations.
+- filter(), map(), distinct(), sorted(), limit(), skip()
+
 ## distinct() filters out duplicate elements from the stream.
 ```java
 public class DistinctEx {
