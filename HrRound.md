@@ -46,11 +46,7 @@ and i continuosly work on refining my communication skills.
 4. Latest Increment letter 
 4. All companies relieving and experience letters 
 5. Most recent appraisal letter with CTC breakup 
-
-
 6. HR intake form 
-
 7. Last working date confirmation email from current employer
-
 8. Counteroffer if any
 
