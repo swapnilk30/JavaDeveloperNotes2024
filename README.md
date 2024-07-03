@@ -1,6 +1,16 @@
 ## JAVA 8 | Optional Class | Function Interface | Lambda Expression | Stream API
+```
+- Explain lamda expression and functional expressions ?
+- Why we are using functional annotation for functional interface
+
+
+```
 ## String
 ## Exception Handling
+```
+- If catch is not present, only finally is present, will the code work ?
+- multiple catch with single finally will work ?
+```
 ## Serialization
 ```
 - What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
@@ -13,6 +23,19 @@ https://www.youtube.com/shorts/IpwvQlyyEDY
 
 ```
 https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dbaf197192
+
+- Can you iterate and remove the element of ArrayList at the same time ?
+- Can you tell me how hashmap internally works ?
+- What is concurrent hashmap ?
+- What is weak hashmap ?
+- How load factor works in hashmap ?
+- Difference between Hashmap vs Hashtable ?
+- What will happen if we put key object in hashmap which is already there ?
+- Difference between Stack and Queue ?
+- What is Hashtable ?
+- How blocking queue works ?
+- Difference between hashmap and concurrent Hashmap ?
+- Lets say you are working with hashmap, First key is null, value is Ravi, Second key is null, value is Bisht, hashmap.get(null), what will  I get
 ```
 ## MultiThreading
 ```
@@ -34,6 +57,11 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 ```
 ## Design Pattern
 - Singleton Design Pattern
+```
+- How to create thread-safe singleton class in java using double checked locking ?
+- How do you break a singleton pattern ?
+- How do prevent a singleton pattern from breaking ?
+```
 - Factory Design Pattern
 
 
@@ -46,8 +74,11 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 ```
 - Can you override static method in java ?
 - Why java does not support operator overloading ?
+- Why multiple inheritance is not supported in java ?
 
 - How to create immutable class in java ?
+
+- what was log4j vulnerability?, how to fix log4j vulnerability ?
 ```
 
 
@@ -174,15 +205,6 @@ implementation class.
 ```
 
 
-
-```
-
-19. How do you break a singleton pattern ?
-20. How do prevent a singleton pattern from breaking ?
-
-
-```
-
 ### 28. Can you tell me 3 terminal operators used in streams ?
 - forEach()
 ```
@@ -236,28 +258,6 @@ public class Main {
 - The Iterator's remove method ensures that the underlying collection is modified in a way that does not interfere with the iteration process.
 
 ```
-31. what was log4j vulnerability?, how to fix log4j vulnerability ?
-
-32. Can you tell me how hashmap internally works ?
-33. What is concurrent hashmap ?
-34. What is weak hashmap ?
-35. How load factor works in hashmap ?
-36. Difference between Hashmap vs Hashtable ?
-37. What will happen if we put key object in hashmap which is already there ?
-38. Difference between Stack and Queue ?
-39. What is Hashtable ?
-40. How blocking queue works ?
-41. Difference between hashmap and concurrent Hashmap ?
-42. Lets say you are working with hashmap, First key is null, value is Ravi, Second key is null, value is Bisht, hashmap.get(null), what will  I get
-
-44. Explain lamda expression and functional expressions ?
-45. Why we are using functional annotation for functional interface
-
-
-
-47. If catch is not present, only finally is present, will the code work ?
-48. multiple catch with single finally will work ?
-
 49. If insert can happen by PUT why do we have POST
 50. can we fetch data with the help of POST ?
 ```
