@@ -12,16 +12,18 @@
 - @Transactional Annotation
 
 ## Design Pattern
-- 
+- Singleton Design Pattern
+- Factory Design Pattern
 ## Microservices
 
 ## MySQL
 
 
 #
+```
 1. Transaction Management in Spring Boot
 - Transaction is a sequence of actions performed by the application that together pipelined to perform a single operation.
-```
+
 https://www.youtube.com/watch?v=6gc-xW4SVa4
 ```
 
