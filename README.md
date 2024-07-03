@@ -12,8 +12,9 @@
 ## MySQL
 
 
-
-
+#
+1. Transaction Management in Spring Boot
+- Transaction is a sequence of actions performed by the application that together pipelined to perform a single operation.
 
 
 ```
