@@ -3,6 +3,14 @@
 ## Exception Handling
 ## Serialization
 ## Collection Framework
+
+```
+1. How will you reverse a List?
+- You can reverse a List in Java using the `Collections.reverse()` method:
+java
+
+Collections.reverse(list);
+```
 ## MultiThreading
 - What is synchronization ?
 ## JDBC
