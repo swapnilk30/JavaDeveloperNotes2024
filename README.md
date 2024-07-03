@@ -2,6 +2,12 @@
 ## String
 ## Exception Handling
 ## Serialization
+```
+- What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
+https://www.youtube.com/shorts/IpwvQlyyEDY
+
+-
+```
 ## Array
 ## Collection Framework
 
@@ -35,20 +41,21 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 
 
 #
+
+
+```
+- Can you override static method in java ?
+- Why java does not support operator overloading ?
+
+- How to create immutable class in java ?
+```
+
+
 ```
 1. Transaction Management in Spring Boot
 - Transaction is a sequence of actions performed by the application that together pipelined to perform a single operation.
 
 https://www.youtube.com/watch?v=6gc-xW4SVa4
-```
-
-
-```
-
-1. Can you override static method in java ?
-5. Why java does not support operator overloading ?
-
-
 ```
 ```
 ### Why char array is preferred to store password than string in java ?
@@ -65,14 +72,7 @@ https://www.youtube.com/watch?v=6gc-xW4SVa4
 - These factors contribute to using char[] for better security and control over sensitive information like passwords.
 
 ```
-```
-# SERIALIZATION
 
-1. What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
-- https://www.youtube.com/shorts/IpwvQlyyEDY
-
-16. How to create immutable class in java ?
-```
 
 ### 12. List of diff strings, how to concat all string and create a new string ?
 
