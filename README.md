@@ -9,7 +9,9 @@
 https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dbaf197192
 ```
 ## MultiThreading
+```
 - What is synchronization ?
+```
 ## JDBC
 ## Hibernate
 ```
@@ -27,7 +29,7 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 ## Design Pattern
 - Singleton Design Pattern
 - Factory Design Pattern
-## Microservices
+
 
 ## MySQL
 
