@@ -53,14 +53,23 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 ## Spring | Spring MVC | SpringBoot
 ```
 - What are the different bean scopes in spring?
+
+- Diff between constructor and setter injection ?
+
+
 - Transaction Management in Spring Boot
 - @Transactional Annotation
 
 
 
 
+- How we can read the property from property file ?
+- What is use of @Value annotation ?
+
 - Difference between @PathVariable and @RequestParam In Spring Boot
 - Difference between @RestController and @Controller In Spring Boot
+
+- What is use of actuators ?
 ```
 ## Design Pattern
 - Singleton Design Pattern
@@ -317,10 +326,7 @@ public class Main {
 89. What is garbage collection ?
 90. There is a method called GC, what is the purpose ?
 91. How garbage collection works internally in java ?
-92. What is use of actuators ?
-93. Diff between constructor and setter injection ?
-94. How we can read the property from property file ?
-95. What is use of @ Value annotation ?
+
 96. What is CI and CD, and why it is important ?
 97. Why the main method is static in java ?
 98. Can we override private variable in java ?
