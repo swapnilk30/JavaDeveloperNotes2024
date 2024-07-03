@@ -52,8 +52,15 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 ```
 ## Spring | Spring MVC | SpringBoot
 ```
+- What are the different bean scopes in spring?
 - Transaction Management in Spring Boot
 - @Transactional Annotation
+
+
+
+
+- Difference between @PathVariable and @RequestParam In Spring Boot
+- Difference between @RestController and @Controller In Spring Boot
 ```
 ## Design Pattern
 - Singleton Design Pattern
@@ -697,11 +704,7 @@ select max(salary) from employee where salary < (select max(salary) from employe
 https://www.youtube.com/watch?v=a3ngELoA9h0
 ```
 
-```
-@RequestMapping
-Difference between @PathVariable and @RequestParam In Spring Boot
-Difference between @RestController and @Controller In Spring Boot
-```
+
 
 ## @Autowired Annotaion
 
