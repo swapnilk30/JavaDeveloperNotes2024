@@ -13,6 +13,8 @@
 ```
 ## Serialization
 ```
+- What is transient in serialization ?
+- Can we serialize static variables ?
 - What happens if your Serializable class contains a member which is not serializable? How do you fix it ?
 https://www.youtube.com/shorts/IpwvQlyyEDY
 
@@ -313,13 +315,12 @@ public class Main {
 76. is finally block always be executed
 77. What is an exception in java and how you handle exception in java ?
 78. Explain classloader in java ?
-79. Can we override static method in java ?
+
 80. What is immutable classes & how we can create a new immutable class ?
 81. Difference between comparator and comparable  in java ?
 82. What is hash collision ?
 83. How will you handle Null pointer exception ?
-84. What is transient in serialization ?
-85. Can we serialize static variables ?
+
 86. What is volatile keyword ?
 87. What are design patterns you have worked on ?
 88. How to create a singleton class ?
@@ -414,6 +415,8 @@ public class Main {
 173. How can you make a piece of code thread safe ?
 174. How can you take a thread dump in java
 175. What is difference between thread and process ?
+
+
 176. What is @Autowire ?
 177. What are spring boot components ?
 178. Why spring boot was introduced ?
