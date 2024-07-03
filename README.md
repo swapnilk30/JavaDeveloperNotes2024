@@ -1173,3 +1173,38 @@ https://www.youtube.com/watch?v=emhAf7srIeg
 ### What is Exception in Java ?
 - Exception is a unwanted event which disturbs the normal flow of execution.
 - exception is an abnormal condition that occurs during the execution of program to stop the entire flow of application.
+
+
+
+### How to convert arraylist to array in java
+```java
+public class ConvertListToArray {
+	
+	public static void main(String[] args) {
+		
+		List<String> al = new ArrayList<String>();
+		
+		al.add("A");
+		al.add("B");
+		al.add("C");
+		al.add("D");
+		al.add("E");
+		
+		System.out.println(al);
+		
+		// Approach 1
+		String[] strArray = new String[al.size()];
+		
+		al.toArray(strArray);
+		
+		System.out.println(Arrays.toString(strArray));
+		
+		// Approach 2
+		String[] array = al.stream().toArray(String[] :: new);
+		
+		System.out.println(Arrays.toString(array));
+		
+	}
+
+}
+```
