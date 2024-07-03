@@ -13,7 +13,8 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 ## JDBC
 ## Hibernate
 ```
-Difference between save and persist method in hibernate
+- What is the difference between session.save() and session.persist() method?
+- What is the difference between get and load method?
 ```
 ## Spring | Spring MVC | SpringBoot
 ```
