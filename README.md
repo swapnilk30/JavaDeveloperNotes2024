@@ -13,9 +13,10 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 ## JDBC
 ## Hibernate
 ## Spring | Spring MVC | SpringBoot
+```
 - Transaction Management in Spring Boot
 - @Transactional Annotation
-
+```
 ## Design Pattern
 - Singleton Design Pattern
 - Factory Design Pattern
