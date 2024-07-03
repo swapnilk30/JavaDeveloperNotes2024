@@ -13,6 +13,9 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 ## JDBC
 ## Hibernate
 ```
+- What are the core interfaces of Hibernate?
+- What is lazy loading in hibernate?
+- What are the states of the object in hibernate?
 - What is the difference between session.save() and session.persist() method?
 - What is the difference between get and load method?
 ```
