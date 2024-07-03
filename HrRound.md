@@ -54,15 +54,3 @@ and i continuosly work on refining my communication skills.
 
 8. Counteroffer if any
 
-
-
-
-
-
-
-
-
-
-
-
-
