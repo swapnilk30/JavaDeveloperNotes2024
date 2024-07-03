@@ -12,6 +12,9 @@ https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dba
 - What is synchronization ?
 ## JDBC
 ## Hibernate
+```
+Difference between save and persist method in hibernate
+```
 ## Spring | Spring MVC | SpringBoot
 ```
 - Transaction Management in Spring Boot
