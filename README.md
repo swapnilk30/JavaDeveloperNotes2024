@@ -1,13 +1,18 @@
 ## JAVA 8 | Optional Class | Function Interface | Lambda Expression | Stream API
 ## String
 ## Exception Handling
+## Serialization
 ## Collection Framework
 ## MultiThreading
+- What is synchronization ?
 ## JDBC
 ## Hibernate
 ## Spring | Spring MVC | SpringBoot
 - Transaction Management in Spring Boot
 - @Transactional Annotation
+
+## Design Pattern
+- 
 ## Microservices
 
 ## MySQL
@@ -263,7 +268,7 @@ public class Main {
 66. What is the use of super keyword
 67. What is throw, throws and when do we use these ?
 
-68. What is synchronization ?
+
 
 69. What is a treeset ?
 70. Explain the role of API Gateway in a microservices architecture ?
