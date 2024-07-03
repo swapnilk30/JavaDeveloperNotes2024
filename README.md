@@ -2,6 +2,7 @@
 ## String
 ## Exception Handling
 ## Serialization
+## Array
 ## Collection Framework
 
 ```
