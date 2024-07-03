@@ -6,11 +6,25 @@
 ## Collection Framework
 
 ```
+https://medium.com/devops-dev/java-collection-list-arraylist-interview-q-a-04dbaf197192
+
 1. How will you reverse a List?
 - You can reverse a List in Java using the `Collections.reverse()` method:
 java
 
 Collections.reverse(list);
+
+2. How the Collection objects are sorted in Java?
+
+Collection objects can be sorted using:
+- `Collections.sort(List<T> list)`: Sorts the list in natural order.
+- `Collections.sort(List<T> list, Comparator<? super T> c)`: Sorts the list using a specified comparator.
+
+- `Arrays.sort(T[] a)`: Sorts an array in natural order.
+- `Arrays.sort(T[] a, Comparator<? super T> c)`: Sorts an array using a specified comparator.
+
+3. How would you convert an ArrayList to Array and an Array to ArrayList?
+
 ```
 ## MultiThreading
 - What is synchronization ?
