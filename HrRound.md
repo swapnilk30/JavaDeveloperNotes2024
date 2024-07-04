@@ -17,6 +17,35 @@ and i continuosly work on refining my communication skills.
 
 
 ### Describe a challenging project you worked on.
+One of the most challenging projects I worked on involved migrating a legacy E-commerce platform to a new system using Spring Boot. We faced issues with data consistency and system downtime. To address these, I designed a comprehensive migration strategy, implemented microservices architecture, and used caching mechanisms to minimize downtime. The project was completed successfully, leading to improved system performance and customer satisfaction."
+
+
+
+### How do you keep up with the latest trends and technologies in software development?
+I regularly read industry blogs, participate in online forums, and attend webinars and conferences. I am also a member of several Java and Spring Boot communities where I can exchange knowledge with peers. Additionally, I take online courses to stay updated with new developments and best practices."
+
+
+
+### How do you handle tight deadlines and pressure?
+I handle tight deadlines by prioritizing tasks, breaking down projects into manageable parts, and maintaining clear communication with my team. I use project management tools to keep track of progress and ensure timely completion. When under pressure, I stay focused and organized, which helps me deliver quality work on time."
+
+
+
+### What are your salary expectations?
+Based on my research and understanding of the market rates for Java developers with my experience level, I am looking for a salary in the range of [provide a range]. However, I am open to discussion and willing to consider the overall compensation package and growth opportunities your company offers.
+
+### Why are you leaving your current job?
+I am looking for new challenges and opportunities to grow my skills further. While I have enjoyed my time at my current job, I believe that [Company Name] offers a dynamic environment where I can work on innovative projects and contribute to impactful solutions. I am eager to bring my expertise in E-commerce and Spring Boot to your team.
+
+
+### How do you approach debugging and troubleshooting?
+I approach debugging systematically by first reproducing the issue and then isolating the problematic code. I use debugging tools and logs to trace the root cause. Writing unit tests helps me catch bugs early. For more complex issues, I collaborate with team members to brainstorm solutions and ensure a thorough fix.
+
+### Can you describe your experience with Agile/Scrum methodologies?
+I have extensive experience working in Agile and Scrum environments. In my current project, we follow Scrum practices with bi-weekly sprints and regular stand-up meetings. I have played roles such as a team member and occasionally acted as a Scrum Master, ensuring smooth coordination and timely delivery of sprint goals.
+
+
+
 
 
 
