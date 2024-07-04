@@ -1,3 +1,33 @@
+
+### Tell me about yourself.
+
+
+### Why do you want to work with us?
+- I'm execited about the oppurtinity to contribute my skills and grow profesionally within a succesful company like yours.
+
+### What are your strengths and weaknesses?
+
+- One of my strengths is my strong problem-solving skills, which I have honed through my work on complex E-commerce projects.
+- I am also highly proficient in Java and Spring Boot, enabling me to develop robust and scalable applications. 
+- As for weaknesses, I sometimes spend too much time perfecting a piece of code. However, I am working on balancing quality with efficiency by setting clear deadlines for myself.
+
+- Or my greatest weakness is public speaking.
+while Ive made significant change in improving my confidence.
+and i continuosly work on refining my communication skills.
+
+
+### Describe a challenging project you worked on.
+
+
+
+
+
+
+### Why Should we Hire You ?
+### Where do you see yourself in 5 Years ?
+
+What is the biggest challenge that team has faced during the project
+
 ### How much you RATE yourself
 - 6/10  I'm Strong in Basics so i can handle everything but it doesnt mean i know everything
 
@@ -21,14 +51,9 @@
 - I learnt a lot in my current company and now i am looking for a more challanging assignment.
 
 
-### weakness ?
-- my greatest weakness is public speaking.
-while Ive made significant change in improving my confidence.
-and i continuosly work on refining my communication skills.
 
 
-### Why do you want to work with us ?
-- I'm execited about the oppurtinity to contribute my skills and grow profesionally within a succesful company like yours.
+
 
 
 
