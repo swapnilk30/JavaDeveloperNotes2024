@@ -274,3 +274,6 @@ logging.level.root=debug
 
 ### Create simple search API for your product in spring boot
 - https://www.youtube.com/watch?v=QtnS_IqA5iM
+
+### Adding Pagination with Page Number Display in a Spring Boot Application
+- https://www.youtube.com/watch?v=CqEvjs3U7Ec
