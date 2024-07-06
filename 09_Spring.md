@@ -268,3 +268,9 @@ http://localhost:8080/employees?page=0&size=10
 ```
 logging.level.root=debug
 ```
+
+
+# Spring Boot
+
+### Create simple search API for your product in spring boot
+- https://www.youtube.com/watch?v=QtnS_IqA5iM
