@@ -90,7 +90,7 @@ What is the biggest challenge that team has faced during the project
 - 
 
 ## Cost To the Company - Current CTC
-- 4.8 LPA
+- 10 LPA
 
 
 
