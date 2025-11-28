@@ -1,3 +1,59 @@
+
+---
+
+# ✅ **Why static methods cannot be overridden?**
+
+Static methods belong to the **class**, not to the object.
+
+Overriding works only on **instance methods (object methods)** using **dynamic binding (runtime polymorphism)**.
+
+Static methods use **compile-time binding**, so Java does **not** support overriding for them.
+
+---
+
+# 🟥 **Example (Static Method Hiding)**
+
+```java
+class Parent {
+    static void show() {
+        System.out.println("Parent show");
+    }
+}
+
+class Child extends Parent {
+    static void show() {
+        System.out.println("Child show");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Parent p = new Child();
+        p.show(); // Output: Parent show (not Child)
+    }
+}
+```
+
+### ✔ Why output is *Parent show*?
+
+Because static methods use **class reference**, not object type.
+
+So:
+
+* `p` is of type `Parent`
+* So `Parent.show()` is called.
+
+This proves **static methods are not overridden**, only **hidden**.
+
+---
+
+# 🟩 **Interview-perfect answer**
+
+> **No, static methods cannot be overridden in Java.**
+> If a subclass declares a static method with the same signature, it is called *method hiding*, not overriding.
+> Overriding requires runtime polymorphism, but static methods are resolved at compile time.
+
+---
 # Converting ArrayList to Array in Java
 
 There are several ways to convert an ArrayList to an array in Java. Here are the most common methods:
