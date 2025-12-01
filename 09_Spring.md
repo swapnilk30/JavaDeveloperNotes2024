@@ -1,11 +1,4 @@
-Below is the **most complete, clean, interview-ready notes** covering
-✔ `@PathVariable`
-✔ `@RequestParam`
-✔ `@ModelAttribute`
 
-Perfect for Spring Boot + Java interviews.
-
----
 
 # 🚀 **INTERVIEW NOTES: @PathVariable vs @RequestParam vs @ModelAttribute**
 
