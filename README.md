@@ -1,6 +1,225 @@
 
 ---
 
+# ✅ **What is `reduce()` in Java Streams?**
+
+`reduce()` is a **terminal operation** that **combines all elements of a stream into a single value**.
+
+It repeatedly applies an **accumulator function** to produce one result.
+
+---
+
+# ✅ **3 Method Signatures**
+
+### **1️⃣ Optional<T> reduce(BinaryOperator<T> accumulator)**
+
+No identity → may return empty.
+
+```java
+Optional<Integer> sum = list.stream()
+                            .reduce((a, b) -> a + b);
+```
+
+---
+
+### **2️⃣ T reduce(T identity, BinaryOperator<T> accumulator)**
+
+Identity → starting value.
+
+```java
+int sum = list.stream()
+              .reduce(0, (a, b) -> a + b);
+```
+
+💡 Identity makes the result **non-Optional**.
+
+---
+
+### **3️⃣ <U> U reduce(U identity,
+
+BiFunction<U, ? super T, U> accumulator,
+BinaryOperator<U> combiner)**
+Used for **parallel streams**.
+
+```java
+int length = words.stream()
+                  .reduce(0,
+                          (total, word) -> total + word.length(),
+                          Integer::sum);
+```
+
+---
+
+# 🔥 How `reduce()` Works (Diagram)
+
+For a stream: **[1, 2, 3, 4]**
+
+### With identity = 0
+
+```
+accumulator(0, 1) → 1
+accumulator(1, 2) → 3
+accumulator(3, 3) → 6
+accumulator(6, 4) → 10
+```
+
+Final result = **10**
+
+---
+
+# 🎯 When to Use reduce()
+
+Use `reduce()` when you want **one final value**, such as:
+
+* sum, min, max
+* string concatenation
+* product of numbers
+* combining objects
+
+---
+
+# ✅ **Top Interview Examples**
+
+---
+
+## **1️⃣ Sum of Numbers**
+
+```java
+int sum = Arrays.asList(1,2,3,4)
+                 .stream()
+                 .reduce(0, Integer::sum);
+```
+
+---
+
+## **2️⃣ Maximum Value**
+
+```java
+Optional<Integer> max = nums.stream()
+                            .reduce(Integer::max);
+```
+
+---
+
+## **3️⃣ Multiply All Numbers**
+
+```java
+int product = nums.stream()
+                  .reduce(1, (a, b) -> a * b);
+```
+
+---
+
+## **4️⃣ Concatenate Strings**
+
+```java
+List<String> names = List.of("A", "B", "C");
+
+String result = names.stream()
+                     .reduce("", (a, b) -> a + b);
+```
+
+---
+
+## **5️⃣ Count Characters in All Strings**
+
+```java
+int charCount = words.stream()
+                     .reduce(0,
+                             (sum, word) -> sum + word.length(),
+                             Integer::sum);
+```
+
+---
+
+## **6️⃣ Sum of Salaries (map + reduce)**
+
+```java
+double total = employees.stream()
+                        .map(Employee::getSalary)
+                        .reduce(0.0, Double::sum);
+```
+
+---
+
+## **7️⃣ Reduce to Custom Object**
+
+```java
+int totalAge = persons.stream()
+                      .reduce(0,
+                              (sum, p) -> sum + p.getAge(),
+                              Integer::sum);
+```
+
+---
+
+## **8️⃣ Reduce With No Identity**
+
+```java
+Optional<Integer> sum = nums.stream()
+                            .reduce((a, b) -> a + b);
+```
+
+---
+
+## **9️⃣ Reduce to find Min**
+
+```java
+int min = nums.stream()
+              .reduce(Integer.MAX_VALUE, Integer::min);
+```
+
+---
+
+## **🔟 Build a Frequency Map Using reduce()**
+
+(Not recommended — just for understanding)
+
+```java
+Map<Character, Integer> freq =
+    chars.stream()
+         .reduce(new HashMap<Character, Integer>(),
+             (map, c) -> {
+                 map.put(c, map.getOrDefault(c, 0) + 1);
+                 return map;
+             },
+             (map1, map2) -> {
+                 map1.putAll(map2);
+                 return map1;
+             });
+```
+
+---
+
+# 🚫 When **NOT** to Use reduce()
+
+❌ Avoid `reduce()` when combining into a **mutable container** (like List, Map).
+Use **Collectors.toList()**, **toMap()**, or **groupingBy()** instead.
+
+---
+
+# ⭐ reduce() vs collect()
+
+| Feature         | reduce()                             | collect()                                 |
+| --------------- | ------------------------------------ | ----------------------------------------- |
+| Purpose         | Combine into single immutable result | Build mutable containers (List, Map, Set) |
+| Mutable?        | ❌ No                                 | ✔ Yes                                     |
+| Recommended for | sum, max, product                    | grouping, partition, list/map creation    |
+
+---
+
+# Want more?
+
+I can give:
+
+✅ reduce() tricky interview questions
+✅ reduce() vs map/filter detailed comparison
+✅ custom reduce example for your Spring Boot project
+
+Just tell me!
+
+---
+
 # ✅ **Why static methods cannot be overridden?**
 
 Static methods belong to the **class**, not to the object.
