@@ -1,6 +1,151 @@
 
 ---
 
+# ✅ **Java Stream API Methods (Cheat Sheet)**
+
+## **1. Creating Streams**
+
+| Method                        | Description                                    |
+| ----------------------------- | ---------------------------------------------- |
+| `Collection.stream()`         | Creates a sequential stream from a collection. |
+| `Collection.parallelStream()` | Creates a parallel stream.                     |
+| `Stream.of(T...)`             | Creates a stream from given elements.          |
+| `Stream.ofNullable(T)`        | Creates a stream with 0 or 1 elements.         |
+| `Stream.generate(Supplier)`   | Produces infinite stream.                      |
+| `Stream.iterate(seed, f)`     | Infinite stream of iterative elements.         |
+| `Arrays.stream(array)`        | Stream from array.                             |
+| `Files.lines(path)`           | Stream of lines from a file.                   |
+
+---
+
+## **2. Intermediate Operations (return Stream)**
+
+These are **lazy** — they don’t run until a terminal operation is called.
+
+### **Filtering**
+
+* `filter(Predicate)`
+* `distinct()`
+* `limit(long)`
+* `skip(long)`
+* `takeWhile(Predicate)` *(Java 9+)*
+* `dropWhile(Predicate)` *(Java 9+)*
+
+### **Mapping**
+
+* `map(Function)`
+* `mapToInt(ToIntFunction)`
+* `mapToLong(ToLongFunction)`
+* `mapToDouble(ToDoubleFunction)`
+* `flatMap(Function)`
+* `flatMapToInt(...)`, etc.
+
+### **Sorting**
+
+* `sorted()`
+* `sorted(Comparator)`
+
+### **Peeking**
+
+* `peek(Consumer)` (for debugging)
+
+---
+
+## **3. Terminal Operations (produce non-stream result)**
+
+These actually trigger stream processing.
+
+### **Matching**
+
+| Method                 | Returns | Description           |
+| ---------------------- | ------- | --------------------- |
+| `anyMatch(Predicate)`  | boolean | At least one matches  |
+| `allMatch(Predicate)`  | boolean | Every element matches |
+| `noneMatch(Predicate)` | boolean | No elements match     |
+
+### **Finding Elements**
+
+* `findFirst()`
+* `findAny()` (useful in parallel streams)
+
+### **Reducers**
+
+| Method                                    | Description |
+| ----------------------------------------- | ----------- |
+| `reduce(identity, accumulator)`           |             |
+| `reduce(accumulator)`                     |             |
+| `reduce(identity, accumulator, combiner)` |             |
+
+### **Collecting**
+
+* `collect(Collector)`
+  Examples:
+
+  * `Collectors.toList()`
+  * `Collectors.toSet()`
+  * `Collectors.toMap()`
+  * `Collectors.groupingBy()`
+  * `Collectors.partitioningBy()`
+  * `Collectors.joining()`
+
+### **Iteration**
+
+* `forEach(Consumer)`
+* `forEachOrdered(Consumer)`
+
+### **Stats**
+
+* `count()`
+* `max(Comparator)`
+* `min(Comparator)`
+
+### **Conversions**
+
+* `toArray()`
+
+---
+
+## **4. Primitive Streams**
+
+### **IntStream, LongStream, DoubleStream**
+
+Methods specific to primitive streams:
+
+* `sum()`
+* `average()`
+* `range(start, end)`
+* `rangeClosed(start, end)`
+* `boxed()`
+* `summaryStatistics()`
+
+---
+
+## **5. Short Examples**
+
+### **Filter + Map + Collect**
+
+```java
+List<String> result = list.stream()
+    .filter(s -> s.length() > 3)
+    .map(String::toUpperCase)
+    .collect(Collectors.toList());
+```
+
+### **Find max**
+
+```java
+Optional<Integer> max = numbers.stream().max(Integer::compareTo);
+```
+
+### **Group by field**
+
+```java
+Map<String, List<Person>> peopleByCity =
+    people.stream().collect(Collectors.groupingBy(Person::getCity));
+```
+
+---
+
 # ✅ **What is `reduce()` in Java Streams?**
 
 `reduce()` is a **terminal operation** that **combines all elements of a stream into a single value**.
