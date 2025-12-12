@@ -1,3 +1,124 @@
+---
+
+# 🔍 **`Arrays.asList()` vs `List.of()`**
+
+## ✅ **1. Mutability**
+
+### **`Arrays.asList()`**
+
+* Returns a **fixed-size list**.
+* Allows `set()`, but **does NOT allow add/remove**.
+* Backed by the original array.
+
+```java
+List<String> list = Arrays.asList("A", "B");
+list.set(0, "X");   // ✔️ OK
+list.add("C");      // ❌ UnsupportedOperationException
+```
+
+### **`List.of()` (Java 9+)**
+
+* Returns an **immutable list**.
+* Does **NOT** allow add, remove, or even set.
+
+```java
+List<String> list = List.of("A", "B");
+list.set(0, "X");   // ❌ UnsupportedOperationException
+list.add("C");      // ❌ UnsupportedOperationException
+```
+
+---
+
+# 🔁 **2. Backing**
+
+### **`Arrays.asList()`**
+
+* Backed by the original array → changes reflect both ways.
+
+```java
+String[] arr = {"A", "B"};
+List<String> list = Arrays.asList(arr);
+
+arr[1] = "Z";
+System.out.println(list); // [A, Z]
+```
+
+### **`List.of()`**
+
+* Not backed by any array → **completely independent**.
+
+---
+
+# 🛡️ **3. Null Handling**
+
+### **`Arrays.asList()`**
+
+✔️ Allows `null` values.
+
+```java
+List<String> list = Arrays.asList("A", null, "B");
+```
+
+### **`List.of()`**
+
+❌ Throws `NullPointerException` if any element is null.
+
+```java
+List.of("A", null, "B");  // ❌ NPE
+```
+
+---
+
+# 🚀 **4. Performance**
+
+### **`Arrays.asList()`**
+
+* Lightweight wrapper around array.
+* Slightly slower for repeated access operations compared to modern immutable lists.
+
+### **`List.of()`**
+
+* Usually **faster and more memory-efficient**.
+* Highly optimized immutable collection.
+
+---
+
+# 🧩 **5. Use Cases**
+
+### **Use `Arrays.asList()` when:**
+
+* You have an **existing array** and want a list view.
+* You need to **modify elements** via `set()`.
+* You don't need to add/remove.
+
+### **Use `List.of()` when:**
+
+* Creating a small, constant, **immutable list**.
+* Want **null safety** (no accidental nulls).
+* Prefer a faster, modern collection.
+
+---
+
+# 📋 **Quick Comparison Table**
+
+| Feature          | `Arrays.asList()`  | `List.of()` |
+| ---------------- | ------------------ | ----------- |
+| Modifiable?      | Partial (only set) | No          |
+| Size fixed?      | Yes                | Yes         |
+| Immutable?       | No                 | Yes         |
+| Allows null?     | Yes                | No          |
+| Backed by array? | Yes                | No          |
+| Introduced in    | Java 1.2           | Java 9      |
+
+---
+
+# ✔️ **Which should you prefer?**
+
+* **Modern Java (9+) → `List.of()`** for small constant lists.
+* **Converting array → List → `Arrays.asList()`**.
+* **Need a fully modifiable list → `new ArrayList<>(Arrays.asList(...))`**.
+
+---
 
 ---
 
