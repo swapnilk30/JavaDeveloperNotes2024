@@ -1,5 +1,3 @@
----
-
 # 🔍 **`Arrays.asList()` vs `List.of()`**
 
 ## ✅ **1. Mutability**
