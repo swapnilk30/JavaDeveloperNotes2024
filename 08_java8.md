@@ -634,3 +634,265 @@ Collect()
 Collectors.toList()
 Collectors.joining()
 ```
+Below are **clean, structured interview notes + code examples** for **Java 8 Stream API** covering **salary problems** and **collect / collectors usage**.
+This is **very common in interviews**.
+
+---
+
+# Java 8 Stream API – Interview Notes & Examples
+
+We’ll use this **Employee class** for all examples:
+
+```java
+class Employee {
+    int id;
+    String name;
+    String department;
+    double salary;
+
+    // constructor + getters
+    public Employee(int id, String name, String department, double salary) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
+    }
+
+    public String getDepartment() { return department; }
+    public double getSalary() { return salary; }
+    public String getName() { return name; }
+}
+```
+
+Sample Data:
+
+```java
+List<Employee> employees = List.of(
+    new Employee(1, "A", "IT", 80000),
+    new Employee(2, "B", "IT", 90000),
+    new Employee(3, "C", "HR", 70000),
+    new Employee(4, "D", "HR", 75000),
+    new Employee(5, "E", "Finance", 85000)
+);
+```
+
+---
+
+## 1. Highest Salary of Employee from Each Department
+
+### ✅ Recommended Approach
+
+```java
+Map<String, Optional<Employee>> highestSalaryByDept =
+    employees.stream()
+             .collect(Collectors.groupingBy(
+                 Employee::getDepartment,
+                 Collectors.maxBy(
+                     Comparator.comparingDouble(Employee::getSalary)
+                 )
+             ));
+```
+
+### Simplified (Salary Only)
+
+```java
+Map<String, Double> highestSalaryByDept =
+    employees.stream()
+             .collect(Collectors.groupingBy(
+                 Employee::getDepartment,
+                 Collectors.collectingAndThen(
+                     Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)),
+                     emp -> emp.get().getSalary()
+                 )
+             ));
+```
+
+### Interview Notes
+
+* `groupingBy()` → department-wise grouping
+* `maxBy()` → finds max element per group
+* Result is wrapped in `Optional`
+
+---
+
+## 2. Average Salary of Each Department
+
+```java
+Map<String, Double> avgSalaryByDept =
+    employees.stream()
+             .collect(Collectors.groupingBy(
+                 Employee::getDepartment,
+                 Collectors.averagingDouble(Employee::getSalary)
+             ));
+```
+
+### Interview Notes
+
+* `averagingDouble()` returns `Double`
+* Handles division internally
+* No need for manual sum/count
+
+---
+
+## 3. Find Nth Highest Salary (Unique Records)
+
+### Example: 2nd Highest Salary
+
+```java
+int n = 2;
+
+Optional<Double> nthHighestSalary =
+    employees.stream()
+             .map(Employee::getSalary)
+             .distinct()
+             .sorted(Comparator.reverseOrder())
+             .skip(n - 1)
+             .findFirst();
+```
+
+### Interview Notes
+
+* `distinct()` removes duplicates
+* `skip(n-1)` skips higher salaries
+* `findFirst()` returns `Optional`
+
+---
+
+## 4. Nth Highest Salary (With Duplicate Records)
+
+```java
+int n = 2;
+
+Optional<Double> nthHighestSalary =
+    employees.stream()
+             .map(Employee::getSalary)
+             .sorted(Comparator.reverseOrder())
+             .skip(n - 1)
+             .findFirst();
+```
+
+### Difference (Very Important)
+
+| Case                       | Use `distinct()` |
+| -------------------------- | ---------------- |
+| Unique salaries            | ✅ Yes            |
+| Duplicate salaries allowed | ❌ No             |
+
+---
+
+## 5. `collect()` Method – Core Concept
+
+```java
+<R, A> R collect(Collector<? super T, A, R> collector)
+```
+
+### Purpose
+
+* Converts a stream into:
+
+  * List
+  * Set
+  * Map
+  * String
+  * Custom structure
+
+---
+
+## 6. `Collectors.toList()`
+
+```java
+List<String> names =
+    employees.stream()
+             .map(Employee::getName)
+             .collect(Collectors.toList());
+```
+
+### Interview Notes
+
+* Returns a **mutable list**
+* Order is preserved
+* Java 16+: `toList()` returns immutable list
+
+---
+
+## 7. `Collectors.joining()`
+
+### Join Names with Comma
+
+```java
+String employeeNames =
+    employees.stream()
+             .map(Employee::getName)
+             .collect(Collectors.joining(", "));
+```
+
+### Prefix & Suffix
+
+```java
+String result =
+    employees.stream()
+             .map(Employee::getName)
+             .collect(Collectors.joining(", ", "[", "]"));
+```
+
+**Output**
+
+```text
+[A, B, C, D, E]
+```
+
+### Interview Notes
+
+* Works only on `Stream<String>`
+* Internally uses `StringBuilder`
+* Very common string-related interview question
+
+---
+
+## 8. One-Line Interview Answers 🔑
+
+> **Highest salary by department:**
+> Use `groupingBy()` with `maxBy()`.
+
+> **Average salary:**
+> Use `Collectors.averagingDouble()`.
+
+> **Nth highest salary:**
+> Sort in descending order, skip `n-1`, and fetch first.
+
+> **joining():**
+> Converts stream of strings into a single string with delimiter.
+
+---
+
+## 9. Time & Space Complexity (Asked Often)
+
+| Operation   | Complexity |
+| ----------- | ---------- |
+| groupingBy  | O(n)       |
+| sorting     | O(n log n) |
+| nth highest | O(n log n) |
+| joining     | O(n)       |
+
+---
+
+## 10. Interview Tip ⭐
+
+Always mention:
+
+* **Optional handling**
+* **distinct vs non-distinct**
+* **boxing/unboxing cost**
+* **readability vs performance tradeoff**
+
+---
+
+If you want, I can also provide:
+
+* **Top 50 Java Stream interview questions**
+* **Real-world coding challenges**
+* **Parallel stream caveats**
+* **Java 17 stream enhancements**
+
+Just say the word 😊
+
