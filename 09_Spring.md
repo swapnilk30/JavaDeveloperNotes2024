@@ -1,3 +1,172 @@
+### `@Modifying` annotation (Spring Data JPA)
+
+`@Modifying` is used in **Spring Data JPA** to indicate that a repository query **changes data** (i.e., it is **not a SELECT** query).
+
+It is required for:
+
+* `UPDATE`
+* `DELETE`
+* `INSERT` (native queries)
+
+---
+
+## Why is `@Modifying` needed?
+
+By default, Spring Data JPA assumes that `@Query` methods are **read-only SELECT queries**.
+If you run an update/delete query without `@Modifying`, you’ll get an exception like:
+
+> *InvalidDataAccessApiUsageException: Modifying queries can only use void or int/Integer return type*
+
+---
+
+## Basic Syntax
+
+```java
+@Modifying
+@Query("UPDATE User u SET u.status = :status WHERE u.id = :id")
+int updateUserStatus(@Param("status") String status,
+                     @Param("id") Long id);
+```
+
+✔ Returns number of rows affected
+
+---
+
+## Common Usage Examples
+
+### 1️⃣ UPDATE Query
+
+```java
+@Modifying
+@Query("UPDATE Employee e SET e.active = false WHERE e.lastLogin < :date")
+int deactivateOldEmployees(@Param("date") LocalDate date);
+```
+
+---
+
+### 2️⃣ DELETE Query
+
+```java
+@Modifying
+@Query("DELETE FROM Order o WHERE o.status = 'CANCELLED'")
+int deleteCancelledOrders();
+```
+
+---
+
+### 3️⃣ Native Query
+
+```java
+@Modifying
+@Query(
+  value = "UPDATE users SET failed_attempts = failed_attempts + 1 WHERE username = ?1",
+  nativeQuery = true
+)
+int incrementFailedAttempts(String username);
+```
+
+---
+
+## Transaction Requirement ⚠️
+
+`@Modifying` **must be executed inside a transaction**.
+
+### Correct way:
+
+```java
+@Transactional
+@Modifying
+@Query("DELETE FROM Session s WHERE s.expiryTime < CURRENT_TIMESTAMP")
+void deleteExpiredSessions();
+```
+
+📌 If `@Transactional` is missing, you may get:
+
+```
+TransactionRequiredException
+```
+
+> Usually placed at **service layer**, but can also be placed on repository method.
+
+---
+
+## Advanced Options
+
+### `clearAutomatically`
+
+Clears persistence context after query execution
+(prevents stale entity data)
+
+```java
+@Modifying(clearAutomatically = true)
+```
+
+---
+
+### `flushAutomatically`
+
+Flushes pending changes before executing query
+
+```java
+@Modifying(flushAutomatically = true)
+```
+
+---
+
+## Return Types Allowed
+
+* `void`
+* `int` / `Integer` (rows affected)
+
+❌ Not allowed:
+
+* Entity
+* List
+* Optional
+
+---
+
+## When NOT to use `@Modifying`
+
+❌ For SELECT queries
+❌ For derived delete methods like:
+
+```java
+void deleteByStatus(String status); // @Modifying NOT needed
+```
+
+---
+
+## Typical Use Case (Your Projects Context 💡)
+
+In **payment gateway / reconciliation systems** (like your OmanNet or Recon work):
+
+* Mark transactions as `PROCESSED`
+* Update inquiry status
+* Cleanup expired session/payment records
+* Bulk status updates for settlement jobs
+
+---
+
+## Quick Summary
+
+| Aspect            | Description              |
+| ----------------- | ------------------------ |
+| Used for          | UPDATE / DELETE / INSERT |
+| Required with     | `@Query`                 |
+| Needs transaction | ✅ Yes                    |
+| Return type       | `void`, `int`            |
+| Common error      | Missing `@Transactional` |
+
+---
+
+If you want, I can:
+
+* Show **real error → fix example**
+* Explain **difference between `@Modifying` vs `save()`**
+* Provide **best practices for bulk updates** in Spring Boot
+
+Just tell me 👍
 
 
 # 🚀 **INTERVIEW NOTES: @PathVariable vs @RequestParam vs @ModelAttribute**
